@@ -3,9 +3,13 @@ body {
     margin: 0px;
     padding: 0px;
     position: relative;
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     min-height: 100%;
     height: 0px;
+}
+
+svg text{
+    font-family: "Open Sans Condensed", sans-serif;
 }
 
 .container-dark{
@@ -49,26 +53,26 @@ a{
 
 
         .special.lg{
-            font-family: "Gotham SSm A", sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-size: 30px;
             font-weight: 300;
             line-height: 1.4;
         }
         .special.xs{
-            font-family: "Gotham SSm A", sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-size: 12px;
             font-weight: 400;
             line-height: 1.4;
         }
         .special.md.light{
-            font-family: "Gotham SSm A", sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-size: 14px;
             font-weight: 400;
             line-height: 1.6;
             color: #a1a2a4;
         }
         .message{
-            font-family: "Gotham SSm A", sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-size: 20px;
             font-weight: 300;
             line-height: 1.4;
@@ -81,7 +85,7 @@ a{
         #pac-input{
             margin-top: 20px;
             margin-bottom: 15px;
-            font-family: "Gotham SSm A", sans-serif;
+            font-family: "Montserrat", sans-serif;
             width: 100%;
             font-size: 22px;
             padding: 15px;
@@ -138,15 +142,15 @@ html.loading .loader { opacity: 1; }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .author{
-    font-family: "Gotham SSm A", sans-serif;
-    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 .publication_date{
-    font-family: "Gotham SSm A", sans-serif;
-    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
     text-transform: uppercase;
-    color: #d1d2d3;
+    color: #c1c2c3;
 }
 a{
     text-decoration: underline;
@@ -161,7 +165,7 @@ p{
 }
 
 p b{
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
 }
 
@@ -216,7 +220,7 @@ p b{
 .intro h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .chapitre {
@@ -271,7 +275,7 @@ p b{
     line-height: 37px;
     margin-top: 60px;
     font-weight: 400;
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-family: Georgia;
     font-size: 22px;
     line-height: 27px;
@@ -284,7 +288,7 @@ p b{
 
 h3 {
     font-size: 30px;
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     margin-bottom: 50px;
 }
@@ -328,7 +332,7 @@ p.small{
 }
 
 .container.image .legend {
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
 }
 
@@ -453,10 +457,10 @@ p.small{
 }
 
 .viewshed-parc_label{
-    color: #333;
-    font-size:  12px;
+    fill: rgba(0,0,0,0.75);
+    font-size:  16px;
     paint-order: stroke;
-    stroke: #ffffff;
+    stroke: rgba(255,255,255,0.75);
     stroke-width: 2px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
@@ -465,10 +469,10 @@ p.small{
 }
 
 .viewshed-parc_label.small{
-    color: #333;
-    font-size:  10px;
+    fill: rgba(0,0,0,0.75);
+    font-size:  13px;
     paint-order: stroke;
-    stroke: #ffffff;
+    stroke: rgba(255,255,255,0.75);
     stroke-width: 1px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
@@ -590,7 +594,7 @@ p.small{
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: "Gotham SSm A", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.5;

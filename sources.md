@@ -1,6 +1,11 @@
 **Carte des vents**: https://data.geo.admin.ch/ch.bfe.windenergie-geschwindigkeit_h150/
 **Carte d'élévation**: http://www.opendem.info/definitions.html
 
+- Filtre blanc opacite sur carte des vents a part. garder parcs sur carte solide (IMG)
+ - Zones d'exclusion en rose/orange, parcs en vert (ou inverse)
+ - Parcs avec villes, pas de label sur les parcs
+
+
 Raster calculator: Condition
 https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-raster-calculator-or-grass-r-mapcalculator
 
