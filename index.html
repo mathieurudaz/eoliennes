@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/gotham-font.css">
@@ -132,8 +132,8 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <img src="subhead.gif" style="width: 100px; height: auto;">
-                <h2 class="colorized">Fusce lacus est</h2>
-                <h1>Nous avons Nunc id magna les éoliennes id massa facilisis.<br/>Voici vulputate nec et nulla.</h1>
+                <h2 class="colorized">Vaud et Régions - éoliennes</h2>
+                <h1>Nous avons cartographié tous les projets éoliens du canton.<br/>Voici ce que vous verrez.</h1>
                 <div class="author">Egestas Condimentum, Aliquet Ullamcorper</div>
                 <div class="publication_date">mars 2018</div>
             </div>
@@ -170,6 +170,30 @@
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
                 <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo. Sed posuere feugiat quam, congue finibus magna mollis in. <b>Nunc id magna id massa facilisis vulputate</b> nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 60px;">
+        <div class="row text-center">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="viewshed-legend">
+                    <div class="legend-bloc">
+                        <div class="legend-text">Parc éolien</div>
+                        <div class="legend-color"></div>                        
+                    </div>
+                    <div class="legend-bloc">
+                        <div class="legend-text">Limite de visibilité</div>
+                        <div class="legend-color"></div>                        
+                    </div>
+                </div>
+                <div id="parks-container"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
             </div>
         </div>
     </div>
@@ -298,7 +322,7 @@
     <div class="container-fluid section container-dark">
         <div class="row text-center">
             <div class="col-md-offset-3 col-md-6">
-                <h2>La pondération</h2>
+                <h2>Titre impact visuel</h2>
             </div>
         </div>
         <div class="row text-center">
@@ -321,7 +345,7 @@
     <div class="container-fluid section container-dark">
         <div class="row text-center">
             <div class="col-md-offset-3 col-md-6">
-                <h2>La pondération</h2>
+                <h2>Titre impact visuel</h2>
             </div>
         </div>
         <div class="row text-center">
@@ -356,113 +380,127 @@
             </div>
         </div>
     </div>
-    <div class="container parcs">
+    <div class="container">
         <div class="row text-center">
             <div class="col-md-offset-3 col-md-6">
                 <h2>Titre données techniques des parcs</h2>
             </div>
         </div>
+    </div>
+    <div class="container parcs">
         <div class="row">
-            <div class="col-md-3">
-                <h3>Bière</h3>
+            <div class="col-md-3 parc-bloc">
+                <h3>Bavois</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
-                <h3>Eoljoux</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Mollendruz</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Sur Grati</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 parc-bloc">
                 <h3>Bel Coster</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
-                <h3>Ste-Croix</h3>
+            <div class="col-md-3 parc-bloc">
+                <h3>Bière</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 parc-bloc">
+                <h3>Bottens</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 parc-bloc">
+                <h3>Cronay</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Chavanne sur Moudon</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Daillens/Oulens</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Eoljoux</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 parc-bloc">
+                <h3>EolJorat Nord</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>EolJorat Sud</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Essertine-sur-Rolle</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
                 <h3>Grandevent</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
+        </div>
+        <div class="row">
+            <div class="col-md-3 parc-bloc">
                 <h3>Grandsonnaz</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 parc-bloc">
+                <h3>Grati</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Mollendruz</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
                 <h3>Provence</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
-                <h3>Vuarrens</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-3 parc-bloc">
+                <h3>Tous-Vents</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 parc-bloc">
                 <h3>Vaudair</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
-            <div class="col-md-3">
-                <h3>Eoljorat Nord</h3>
+            <div class="col-md-3 parc-bloc">
+                <h3>Villars-le-terroir</h3>
+                <p>Morbi rhoncus suscipit ex</p>
+                <p>Oppositions</p>
+            </div>
+            <div class="col-md-3 parc-bloc">
+                <h3>Vuarrens</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
-                <h3>Eoljorat Sud</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Vuarrens</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Vaudair</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Eoljorat Nord</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h3>Eoljorat Sud</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Vuarrens</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
-            </div>
-            <div class="col-md-3">
-                <h3>Vaudair</h3>
+            <div class="col-md-3 parc-bloc">
+                <h3>Ste-Croix</h3>
                 <p>Morbi rhoncus suscipit ex</p>
                 <p>Oppositions</p>
             </div>
@@ -499,6 +537,20 @@
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgQ6KXHrB6tMqwK-xGL3FkqiTHG_7urcE&libraries=places&language=fr"></script>
     <script src="geocoding.js"></script>
+    <script src="Windmap.js"></script>
+    <script src="wind_flowfield/victor.min.js"></script>
+    <script src="wind_flowfield/engine.js"></script>
+
+    <script type="text/javascript">
+
+        /**
+         * Parks map
+         */
+
+         var windmap = new Windmap("#parks-container", function(){});
+
+
+    </script>
 
     <script type="text/javascript">
 
@@ -598,10 +650,27 @@
             .attr("width", vdWidth)
             .attr("height", vdHeight);
 
+        // Add a test map SVG container
+        var parksSVG = d3.select("#parks-container").append("svg")
+            .attr("id", "parks-map")
+            .attr("width", vdWidth)
+            .attr("height", vdHeight);
+
+        // Add parks labels layer SVG container
+        var parksLabelsSVG = d3.select("#parks-container").append("svg")
+            .attr("id", "parks_labels-map")
+            .attr("width", vdWidth)
+            .attr("height", vdHeight);
 
         // Load the map geometry
         d3.json("vd_communes-quantized_topo.json", function(error, vd) {
             if (error) throw error;
+
+            // add the geometries to the #1 MAP (parcs)
+            parksSVG.append("path")
+                .datum(topojson.feature(vd, vd.objects.communes, function(a, b) { return a !== b; }))
+                .attr("class", "communes")
+                .attr("d", windmap.path);
 
             // add the geometries to the map
             /* viewshedSVG.append("path")
@@ -643,13 +712,13 @@
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1];
                 })
                 .attr("class", function(d){ return "park-id-" + d.properties.id + " park-circle"})
-                .attr("r", 3)
+                .attr("r", 4)
                 .on("mouseover", function(d){ return viewshedSVG.selectAll(
                     ".viewshed-parc_label-id-" + d.properties.id).style("visibility", "visible") })
                 .on("mouseout", function(){ return viewshedSVG.selectAll("text.viewshed-parc_label").style("visibility", "hidden") })
 
 
-            // Add the markers labels
+            // Add the markers labels to the #2 MAP (viewshed)
             viewshedSVG.selectAll("text.viewshed-parc_label")
                 .data(vd.features)
                 .enter()
@@ -666,6 +735,7 @@
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1] - 19;
                 })
 
+            // Add the markers sublabels to the #2 MAP (viewshed)
             viewshedSVG.selectAll("text.viewshed-parc_label.small")
                 .data(vd.features)
                 .enter()
@@ -682,7 +752,23 @@
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1] - 7;
                 })
 
-            console.log(vd)
+            // Add the markers labels to the #1 MAP (parcs)
+            parksLabelsSVG.selectAll("text.viewshed-parc_label")
+                .data(vd.features)
+                .enter()
+                .append("text")
+                .attr("class", function(d){ return "viewshed-parc_label-id-" + d.properties.id + " viewshed-parc_label"})
+                .attr("text-anchor", "middle")
+                .text(function(d) {
+                    return d.properties.attribut_6;
+                })
+                .attr("x", function(d) {
+                    return windmap.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0];
+                })
+                .attr("y", function(d) {
+                    return windmap.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1];
+                })
+
         });
     </script>
 

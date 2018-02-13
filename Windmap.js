@@ -2,12 +2,14 @@ function Windmap(container, callback){
   var that = this;
   this.width = $(container).width();
   this.height = this.width * 0.65;
+  this.bounds = [5.9772400000000001, 47.0698599999999985, 7.3617400000000002, 46.1227000000000018];
+  this.boids = [];
 
   this.color, this.strengthColor, this.normalizedStrength = d3.scaleLinear();
 
   this.windData = null;
   //this.windStrength = null;
-  this.filteredWindData = null;
+  //this.filteredWindData = null;
   this.ij, this.max, this.scale, this.strengthScale;
   this.offset = 0;
 
@@ -47,7 +49,7 @@ function Windmap(container, callback){
         .attr("d", that.path);
 
       // Places name and coordinates
-      var cities = [
+      /*var cities = [
         {name: 'Lausanne', cord: [6.62, 46.51]},
         {name: 'Yverdon', cord: [6.632, 46.775]},
         {name: 'Montreux', cord: [6.914, 46.432]},
@@ -75,65 +77,15 @@ function Windmap(container, callback){
         .attr("transform", function(d, i) {return "translate(" + that.projection(d.cord)[0] + "," + that.projection(d.cord)[1] + ")";})
         .attr('text-anchor', 'middle')
         .attr('dy', -5)
-        .text( function (d) { return d.name; });
+        .text( function (d) { return d.name; });*/
 
-      // Draw Legend
-
-      /*
-      var legend = that.svg.append("g")
-        .attr("class","legend")
-        .attr("transform","translate(30,60)");
-
-      legend.append("text")
-        .attr("x", "100px")
-        .attr('dy', -7)
-        .text("Force du vent")
-        .attr("class", "legend-title")
-        .attr('text-anchor', 'middle');
-
-      for(var i=0; i<5; i++){
-        legend.append("rect")
-          .attr("x", i*41)
-          .attr("y", 0)
-          .attr("width", 40)
-          .attr("height", 7)
-          //.attr("fill", strengthColor(i*20/100));
-
-        legend.append("text")
-          .text(i*5 + (i >= 4 && " km/h"))
-          .attr('dy', 19)
-          .attr("x", i*41)
-          .attr("y", 0)
-      }
-      */
-
-      /*
-      // Title
-      var title = that.svg.append("g")
-        .attr("class","title")
-        .attr("transform","translate(50,30)");
-
-      title.append("text")
-        .attr("class", "title-date")
-        .attr("x", "100px")
-        .attr('dy', -7)
-        .text("Lundi 11 décembre 15:30")
-        .attr('text-anchor', 'middle');
-      */
   });
 
   d3.csv("./wind_flowfield/wind_direction_concatenated.csv", function(data) {
       that.windData = data;
-      that.filteredWindData = that.windData.filter(function(d){ return d.z > 200; })
-      dataSorted = data.slice()
-
-      ij = 0
-      max = dataSorted.sort(function(a, b) { return b.z - a.z; });
-      max = max[0].z
-      scale = d3.scaleLinear().domain([0, max]).range(['rgba(255,0,255,1)', 'rgba(50,255,255,1)']);
 
       for (var i = 0; i < 10000; ++i) {
-        boids.push(new Boid(
+        that.boids.push(new Boid(
           Math.random() * that.width,
           Math.random() * that.height,
           that));
@@ -143,30 +95,42 @@ function Windmap(container, callback){
       callback();
   });
 
-  /*d3.csv("./wind_flowfield/wind_strength_EPSG4326_clipped_200x145.csv", function(data) {
-      that.windStrength = data;
-      dataSorted = data.slice()
+  d3.json("./parcs_polygons_quantized.topojson", function(error, vd) {
+    if (error) throw error;
 
-      strengthMax = dataSorted.sort(function(a, b) { return b.z - a.z; });
-      strengthMax = strengthMax[0].z
-      that.strengthColor = d3.scaleLinear().domain([4.29, 14, strengthMax]).range(['#02d8db', '#8c96c6', '#edf8fb']);
+    // add the geometries to the map
+    parksLabelsSVG.append("path")
+        .datum(topojson.feature(vd, vd.objects.communes, function(a, b) { return a !== b; }))
+        .attr("class", "parc")
+        .attr("d", that.path);
 
-      that.normalizedStrength = d3.scaleLinear().domain([4, 16]).range([0.9, 1.02]);
-  });*/
+  });
+
+  d3.json("./parcs_buffer_quantized.topojson", function(error, vd) {
+    if (error) throw error;
+
+    // add the geometries to the map
+    parksLabelsSVG.append("path")
+        .datum(topojson.feature(vd, vd.objects.communes, function(a, b) { return a !== b; }))
+        .attr("class", "parc-buffer")
+        .attr("d", that.path);
+
+  });
+
 }
 
 
 Windmap.prototype.wrapAround = function(boid) {
-  if (boid.position.x < bounds[0]) {
+  if (boid.position.x < this.bounds[0]) {
     boid.init();
   }
-  if (boid.position.y < bounds[3]) {
+  if (boid.position.y < this.bounds[3]) {
     boid.init();
   }
-  if (boid.position.x >= bounds[2]) {
+  if (boid.position.x >= this.bounds[2]) {
     boid.init();
   }
-  if (boid.position.y >= bounds[1]) {
+  if (boid.position.y >= this.bounds[1]) {
     boid.init();
   }
 }
@@ -174,7 +138,7 @@ Windmap.prototype.wrapAround = function(boid) {
 Windmap.prototype.updateBoids = function() {
   var that = this;
 
-  boids.forEach(function (boid) {
+  this.boids.forEach(function(boid) {
     // Move the boid
     boid.update();
 
@@ -197,8 +161,8 @@ Windmap.prototype.animate = function() {
 }
 
 Windmap.prototype.getFieldBPos = function(pos){
-  var boidCol =  Math.floor((pos.x-bounds[0])/(Math.abs(bounds[0] - bounds[2])/this.cols))
-  var boidRow =  Math.floor(Math.abs(pos.y-bounds[1])/(Math.abs(bounds[3] - bounds[1])/this.rows))
+  var boidCol =  Math.floor((pos.x-this.bounds[0])/(Math.abs(this.bounds[0] - this.bounds[2])/this.cols))
+  var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[1])/(Math.abs(this.bounds[3] - this.bounds[1])/this.rows))
 
   fieldCellIndex = boidCol + this.cols * boidRow;
 
@@ -212,13 +176,3 @@ Windmap.prototype.getFieldBPos = function(pos){
 Windmap.prototype.getFieldPosValue = function(pos){
   return this.windData[(this.offset*this.cols*this.rows) + this.getFieldBPos(pos)]
 }
-
-/*Windmap.prototype.getFieldPosBStrength = function(pos){
-  return windStrength[getFieldBPos(pos)]
-}*/
-
-/*Windmap.prototype.nextHour = function(){
-  offset = ((offset + 1) % 3) 
-  $("text.title-date").text("Lundi 12 décembre " + ( 8 + offset ) + ":00")
-  console.log( offset + ", " + ( offset*cols*rows ) )
-}*/

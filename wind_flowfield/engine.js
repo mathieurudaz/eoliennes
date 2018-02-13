@@ -1,7 +1,3 @@
-var boids = [];
-var bounds = [5.9772400000000001, 47.0698599999999985, 7.3617400000000002, 46.1227000000000018];
-
-
 function Boid(x, y, map) {
   this.map = map;
   this.fieldPos = null;
@@ -12,11 +8,11 @@ function Boid(x, y, map) {
 
 Boid.prototype.init = function () {
   this.age = 0;
-  this.color = "#333333"//"rgba(255,255,255,0)"//"rgba(160,160,255,0.95)"//"#333333";
+  this.color = "#000011"//"rgba(255,255,255,0)"//"rgba(160,160,255,0.95)"//"#333333";
   this.lifespan = Math.random()*50;
   this.position = new Victor(
-    bounds[0] + Math.random()*(bounds[2]-bounds[0]), 
-    bounds[1] + Math.random()*(bounds[3]-bounds[1]))
+    this.map.bounds[0] + Math.random()*(this.map.bounds[2]-this.map.bounds[0]), 
+    this.map.bounds[1] + Math.random()*(this.map.bounds[3]-this.map.bounds[1]))
   this.velocity = new Victor(0.0025, 0);
   this.orient(this.map.getFieldPosValue(this.position).z, 0.3)
 };

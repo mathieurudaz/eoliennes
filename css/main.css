@@ -206,11 +206,17 @@ p b{
 .intro h1 {
     margin-top: 0px;
     margin-bottom: 40px;
-    font-family: "Gotham SSm A", sans-serif;
-    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
     font-size: 34px;
-    line-height: 1.5;
+    line-height: 1.3;
     color: #333;
+}
+
+.intro h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .chapitre {
@@ -234,17 +240,25 @@ p b{
 .container.parcs{
     margin-top: 40px;
     margin-bottom: 40px;
-}
-.container.parcs div{
-    border: 1px solid #f5f6f7;
+    border-top: 1px solid #dadbdc;
+    border-left: 1px solid #dadbdc;
 }
 
-.container.parcs .row div.nth-child(even){
+.container.parcs .parc-bloc:nth-child(odd){
     background-color: #f5f6f7;
 }
 
-.container.parcs h3{
-    font-size: 20px;
+.container.parcs .parc-bloc{
+    border-right: 1px solid #dadbdc;
+    border-bottom: 1px solid #dadbdc;
+}
+
+.container.parcs .parc-bloc h3{
+    font-size: 14px;
+}
+
+.container.parcs .parc-bloc p{
+    font-size: 14px;
 }
 
 .container.lead {
@@ -266,12 +280,6 @@ p b{
 .container.lead small {
     font-size: 12px;
     display: block;
-}
-
-h2 {
-    font-family: "Gotham SSm A", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
 }
 
 h3 {
@@ -357,6 +365,61 @@ p.small{
  */
 
 
+ /**
+  * #1 MAP (parks map)
+  */
+
+  #parks-container{
+    position: relative;
+    overflow: hidden;
+  }
+
+  #parks-container svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #parks-container .mask{
+    fill: white;
+  }
+
+  #parks-container canvas{
+    z-index: 1;
+    opacity: 0.085;
+  }
+
+  #parks-container svg .communes{
+    fill: transparent;/*#f5f6f7;*/
+    /*stroke-width:1px;
+    stroke: rgba(0,0,35,0.075);*/
+  }
+
+  #parks-container svg text{
+    visibility: visible;
+  }
+
+  #parks-container path.parc{
+    fill: #7ab4a7;
+    opacity: 0.85;
+    stroke: rgba(0,0,0,0.2);
+    stroke-width:1px;
+  }
+
+  #parks-container path.parc-buffer{
+    fill: transparent;
+    stroke: #333;
+    stroke-width:1px;
+    stroke-dasharray: 5 3;
+    opacity: 0.55;
+  }
+
+ /**
+  * END Parks map
+  */
+
+
 /**
  * Viewshed
  */
@@ -383,7 +446,7 @@ p.small{
 
 .park-circle{
     fill: #ffffff;
-    stroke: #333333;
+    stroke: rgba(0,0,0,0.5);
     opacity: 0.95;
     stroke-width:1px;
     cursor: pointer;
