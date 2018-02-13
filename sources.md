@@ -4,6 +4,7 @@
 - Filtre blanc opacite sur carte des vents a part. garder parcs sur carte solide (IMG)
  - Zones d'exclusion en rose/orange, parcs en vert (ou inverse)
  - Parcs avec villes, pas de label sur les parcs
+ - Garder les memes cercles de visibilite sur cate #1 et #1
 
 
 Raster calculator: Condition
