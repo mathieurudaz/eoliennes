@@ -1,0 +1,30 @@
+.slider-track{
+  background-image: none;
+  box-shadow: none;
+}
+
+.slider.slider-horizontal .slider-track,
+.slider.slider-horizontal .slider-selection{
+  height: 2px;
+  background-color: #555;
+  background-image: none;
+  box-shadow: none;
+}
+
+.slider-track-high{
+  display: none;
+}
+
+.slider-track-low{
+  display: none;
+}
+
+.slider-handle{
+  top: -7px;
+  cursor: pointer;
+  background-color: #61c1aa;
+  background-image: none;
+  border:2px solid #555;
+  width: 25px;
+  height: 25px;
+}

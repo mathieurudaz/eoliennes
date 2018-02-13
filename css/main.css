@@ -1,0 +1,634 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: "Gotham SSm A", sans-serif;
+    min-height: 100%;
+    height: 0px;
+}
+
+.container-dark{
+    background-color: #333;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+}
+
+.colorized,
+a{
+    color: #61c1aa;
+}
+
+        b.special{
+            font-weight: 500;
+            color:#61c1aa;
+            font-size: 40px
+        }
+
+.loader {
+    background-color: #111;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 3000;
+
+-webkit-transition: opacity 800ms ease-in;
+   -moz-transition: opacity 800ms ease-in;
+     -o-transition: opacity 800ms ease-in;
+        transition: opacity 800ms ease-in;
+}
+
+#graphic{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+        .special.lg{
+            font-family: "Gotham SSm A", sans-serif;
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .special.xs{
+            font-family: "Gotham SSm A", sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .special.md.light{
+            font-family: "Gotham SSm A", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #a1a2a4;
+        }
+        .message{
+            font-family: "Gotham SSm A", sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .message_result{
+            padding: 15px;
+            font-weight: 400;
+            background-color: #f5f6f7;
+        }
+        #pac-input{
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-family: "Gotham SSm A", sans-serif;
+            width: 100%;
+            font-size: 22px;
+            padding: 15px;
+            font-weight: 200;
+            color: #266d5c;
+            text-align: center;
+            background-color: rgba(97,193,170,0.2);
+            border:0px;
+            border-bottom: 3px solid #61c1aa;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #266d5c;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #266d5c;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #266d5c;
+        }
+
+    .ponderation_bloc{
+        background-color: #7ab4a7;
+        height: 90px;
+        width: 100%;
+        border-style: dashed;
+        border-width: 0px;
+        border-bottom: 1px dashed #333;
+    }
+
+    .ponderation_bloc:nth-child(1){ opacity: 1; }
+    .ponderation_bloc:nth-child(2){ opacity: 0.7; }
+    .ponderation_bloc:nth-child(3){ opacity: 0.5; }
+    .ponderation_bloc:nth-child(4){ opacity: 0.3; }
+    .ponderation_bloc:nth-child(5){ opacity: 0.2; }
+    .ponderation_bloc:nth-child(6){ opacity: 0.1; }
+    .ponderation_bloc:nth-child(7){ opacity: 1; }
+    .ponderation_bloc:nth-child(8){ opacity: 1; }
+    .ponderation_bloc:nth-child(9){ opacity: 1; }
+    .ponderation_bloc:nth-child(10){ opacity: 1; }
+    .ponderation_bloc:nth-child(11){ opacity: 1; }
+    .ponderation_bloc:nth-child(12){ opacity: 1; }
+
+
+.loader img{ width: 200px; }
+html.loading{ overflow: hidden; }
+body .loader { opacity: 0; }
+html.loading .loader { opacity: 1; }
+
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.author{
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.publication_date{
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d1d2d3;
+}
+a{
+    text-decoration: underline;
+}
+p{
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 1.8em;
+    font-weight: 400;
+    text-shadow: 0 1px 0 #FFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+p b{
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: bold;
+}
+
+.section{
+    margin-top: 90px;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+}
+
+.intro {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: #333;
+}
+
+.intro h1 {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.chapitre {
+    margin: 60px auto;
+    padding-top: 50px;
+    height: 100%;
+    background-size: cover;
+    background-attachment: scroll;
+    text-align: center;
+}
+
+.chapitre h1 {
+    margin-top: 40px;
+    font-family: "Playfair Display";
+    font-weight: normal;
+    font-size: 40px;
+    color: white;
+}
+
+
+.container.parcs{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.container.parcs div{
+    border: 1px solid #f5f6f7;
+}
+
+.container.parcs .row div.nth-child(even){
+    background-color: #f5f6f7;
+}
+
+.container.parcs h3{
+    font-size: 20px;
+}
+
+.container.lead {
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+}
+
+.container.lead p {
+    font-size: 32px;
+    line-height: 37px;
+    margin-top: 60px;
+    font-weight: 400;
+    font-family: "Gotham SSm A", sans-serif;
+    font-family: Georgia;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.container.lead small {
+    font-size: 12px;
+    display: block;
+}
+
+h2 {
+    font-family: "Gotham SSm A", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.citation p {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.citation {
+    padding-top: 90px;
+    margin-bottom: 50px;
+}
+
+.citation:before {
+    content: "“";
+    font-size: 160px;
+    color: rgb(71, 123, 119);
+    font-family: "Playfair Display";
+    font-weight: 300;
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+}
+
+p.small{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.container.image {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container-fluid.image {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.container.image .legend {
+    font-family: "Gotham SSm A", sans-serif;
+    font-size: 12px;
+}
+
+.container-fluid.chapitre {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.vertical-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+/**
+ * Message
+ */
+
+.message_container .message{ display: none; }
+.message_container .spinner{ display: none; }
+.message_container.loading .spinner{ display: inline-block; }
+.message_container.success .message{ display: inline-block; }
+
+/**
+ * END Message
+ */
+
+
+/**
+ * Viewshed
+ */
+
+#viewshed-container{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+#viewshed-map{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: transparent;
+}
+
+#viewshed-map .canton-boundary{
+    fill: transparent;
+    stroke: #333;
+    stroke-linejoin: round;
+    stroke: transparent;
+}
+
+.park-circle{
+    fill: #ffffff;
+    stroke: #333333;
+    opacity: 0.95;
+    stroke-width:1px;
+    cursor: pointer;
+}
+
+.viewshed-parc_label{
+    color: #333;
+    font-size:  12px;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.viewshed-parc_label.small{
+    color: #333;
+    font-size:  10px;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 1px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    font-weight: 600;
+}
+
+.user-circle{
+    fill: #333333;
+    stroke: #ffffff;
+    opacity: 0.95;
+    stroke-width:1px;
+    visibility: hidden;
+}
+
+.user-text{
+    color: #333;
+    font-size:  14px;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.zoom-text{
+    margin-top: 20px;
+}
+
+/**
+ * END Viewshed
+ */
+
+
+/**
+ * Legend
+ */
+
+.legend-bloc{
+    width: 120px;
+    display: inline-block;
+}
+
+.legend-bloc:nth-child(1){ text-align: left; }
+.legend-bloc:nth-child(2){ text-align: left; }
+.legend-bloc:nth-child(3){ text-align: left; }
+
+
+.legend-bloc:nth-child(1) .legend-color{ background-color: #f5f6f7; }
+.legend-bloc:nth-child(2) .legend-color{ background-color: #f5f6f7; }
+.legend-bloc:nth-child(3) .legend-color{ background-color: #f5f6f7; }
+
+.legend-bloc:nth-child(1) .legend-text{ text-align: left; }
+.legend-bloc:nth-child(2) .legend-text{ text-align: left; }
+.legend-bloc:nth-child(3) .legend-text{ text-align: left; }
+
+.legend-text{
+    font-size: 14px;
+    line-height: 1.1em;
+    font-weight: bold;
+}
+
+.legend-subtext{
+    font-size: 14px;
+    line-height: 1.1em;
+    font-weight: 200;
+}
+
+.legend-sub-text{
+    width: 30px;
+    float:left;
+}
+
+.legend-color{
+    width: 90px;
+    height: 12px;
+    display: inline-block;
+}
+
+.legend-sub-color{
+    width: 30px;
+    height: 12px;
+    float: left;
+}
+
+.legend-sub-color:nth-child(1){ background-color: #d1e7e4; }
+.legend-sub-color:nth-child(2){ background-color: #9fccc1; }
+.legend-sub-color:nth-child(3){ background-color: #79b4a7; }
+
+.legend-marker-circle{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #333;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/**
+ * END Legend
+ */
+
+
+/**
+ * Zones d'exclusion
+ */
+
+.swiper-wrapper{
+    background-color: white;
+}
+
+.swiper-slide{
+    background-color: white;
+    text-align: center;
+}
+
+.swiper-caption{
+    display: inline-block;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Gotham SSm A", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    background-color: rgba(97,193,170,0.2);
+    color: #333;
+}
+
+/**
+ * END Zones d'exclusion
+ */
+
+
+    /**
+     * Pondération
+     */
+
+    .ponderation2_container{
+        background-color: #7ab4a7;
+        height: 400px;
+        width: 600px;
+        display: inline-block;
+    }
+
+    .ponderation_target{
+        background-color: #333;
+        height: 160px;
+        width: 160px;
+        display: inline-block;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0.75;
+        border: 1px dashed #333;
+    }
+
+
+    /**
+     * END Pondération
+     */
+
+/* Small devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) {
+    .loader img{
+        width: 300px;
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media screen and (min-width: 992px) {
+    .container.lead p {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .intro h1 {
+        font-size: 60px;
+    }
+    .intro, .chapitre {
+        background-attachment: fixed;
+    }
+    .loader img{
+        width: 300px;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+    .loader img{
+        width: 300px;
+    }
+    .intro h1 {
+        font-size: 45px;
+    }
+    .chapitre h1 {
+        font-size: 60px;
+    }
+    p.lead {
+        font-size: 26px;
+        font-weight: 300;
+    }
+    .container.lead p {
+        font-size: 37px;
+    }
+    .container.lead small {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .citation p {
+        font-size: 32px;
+    }
+}

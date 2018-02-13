@@ -1,0 +1,33 @@
+footer{
+    margin-top: 100px;
+    background-color: #f5f6f7;
+    padding: 80px 0px;
+    font-size: 14px;
+    font-family: "Gotham SSm A", sans-serif;
+}
+
+footer .container{ 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+footer b{ 
+    color: #222;
+}
+
+footer .copyright{
+    margin-top: 20px;
+}
+
+footer .copyright img{
+    display: inline-block;
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+footer .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    border:none;
+    padding-left: 0px;
+}

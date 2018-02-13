@@ -1,0 +1,55 @@
+.navbar .container{
+    border-left:0px;
+    border-right:0px;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-default.navfade .navbar-toggle .icon-bar {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-brand {
+    height: 50px;
+    background-image: url(../24h_logo_full_black.svg);
+    width: 200px;
+    background-size: auto 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar-default.navfade {
+    background-color: white;
+    border-color: #f5f6f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*transition: all 600ms ease-in;*/
+}
+
+.navbar-default.navfade .navbar-brand {
+    background-image: url(../24h_logo_full_black.svg);
+}
+
+.navbar-default.navfade .navbar-nav>li>a {
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+}
+
+.navbar-default {
+    background-color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav .mdi {
+    font-size: 20px;
+}
