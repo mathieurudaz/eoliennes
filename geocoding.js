@@ -45,8 +45,12 @@ var geocoding = (function(){
 
                 vsMarkerText
                     .attr("style", "visibility: visible")
-                    .attr("x", vsProjectedPosition[0])
-                    .attr("y", vsProjectedPosition[1])
+                    .attr("x", vsProjectedPosition[0] + 60)
+                    .attr("y", vsProjectedPosition[1] - 22)
+
+                d3.select("#user-arrow")
+                    .attr("style", "visibility: visible")
+                    .attr("style", "left:" + (vsProjectedPosition[0] + 0 ) + "px; top:" + (vsProjectedPosition[1]-33) + "px;visibility:visible;");
 
                 var pixelData = canvas.getContext('2d').getImageData(
                     projectedPosition[0], projectedPosition[1], 1, 1).data;

@@ -13,6 +13,10 @@ svg text{
     font-family: "Open Sans Condensed", sans-serif;
 }
 
+/**
+ * Dark container
+ */
+
 .container-dark{
     background-color: #333;
     color: #fff;
@@ -20,6 +24,14 @@ svg text{
     padding-bottom: 60px;
     margin-bottom: 40px;
 }
+
+.container-dark p{
+    text-shadow: none;
+}
+
+/**
+ * END Dark container
+ */
 
 .colorized,
 a{
@@ -109,27 +121,6 @@ a{
             color: #266d5c;
         }
 
-    .ponderation_bloc{
-        background-color: #7ab4a7;
-        height: 90px;
-        width: 100%;
-        border-style: dashed;
-        border-width: 0px;
-        border-bottom: 1px dashed #333;
-    }
-
-    .ponderation_bloc:nth-child(1){ opacity: 1; }
-    .ponderation_bloc:nth-child(2){ opacity: 0.7; }
-    .ponderation_bloc:nth-child(3){ opacity: 0.5; }
-    .ponderation_bloc:nth-child(4){ opacity: 0.3; }
-    .ponderation_bloc:nth-child(5){ opacity: 0.2; }
-    .ponderation_bloc:nth-child(6){ opacity: 0.1; }
-    .ponderation_bloc:nth-child(7){ opacity: 1; }
-    .ponderation_bloc:nth-child(8){ opacity: 1; }
-    .ponderation_bloc:nth-child(9){ opacity: 1; }
-    .ponderation_bloc:nth-child(10){ opacity: 1; }
-    .ponderation_bloc:nth-child(11){ opacity: 1; }
-    .ponderation_bloc:nth-child(12){ opacity: 1; }
 
 
 .loader img{ width: 200px; }
@@ -373,12 +364,12 @@ p.small{
   * #1 MAP (parks map)
   */
 
-  #parks-container{
+  #parcs-container{
     position: relative;
     overflow: hidden;
   }
 
-  #parks-container svg{
+  #parcs-container svg{
     position: absolute;
     top: 0;
     left: 0;
@@ -425,7 +416,7 @@ p.small{
 
 
 /**
- * Viewshed
+ * #2 MAP (viewshed)
  */
 
 #viewshed-container{
@@ -464,7 +455,7 @@ p.small{
     stroke-width: 2px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
-    font-weight: 600;
+    font-weight: 700;
     visibility: hidden;
 }
 
@@ -479,9 +470,16 @@ p.small{
     font-weight: 600;
 }
 
+#user-arrow{
+    position: absolute;
+    width: 55px;
+    height: 28px;
+    visibility: hidden;
+}
+
 .user-circle{
-    fill: #333333;
-    stroke: #ffffff;
+    fill: #f0776e;
+    stroke: rgba(0,0,0,0.5);
     opacity: 0.95;
     stroke-width:1px;
     visibility: hidden;
@@ -491,7 +489,7 @@ p.small{
     color: #333;
     font-size:  14px;
     paint-order: stroke;
-    stroke: #ffffff;
+    stroke: rgba(255,255,255,0.75);
     stroke-width: 2px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
@@ -504,7 +502,7 @@ p.small{
 }
 
 /**
- * END Viewshed
+ * END #2 MAP
  */
 
 
@@ -564,8 +562,9 @@ p.small{
 .legend-sub-color:nth-child(3){ background-color: #79b4a7; }
 
 .legend-marker-circle{
-    width: 6px;
-    height: 6px;
+    background-color: white;
+    width: 8px;
+    height: 8px;
     border: 1px solid #333;
     display: inline-block;
     border-radius: 50%;
@@ -574,6 +573,39 @@ p.small{
 /**
  * END Legend
  */
+
+
+/**
+  * #3 MAP (windatlas)
+  */
+
+  #windatlas-container{
+    position: relative;
+    overflow: hidden;
+  }
+
+  #windatlas-container svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #windatlas-container .mask{
+    fill: white;
+  }
+
+  #windatlas-container canvas{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+ /**
+  * END #3 MAP
+  */
 
 
 /**
@@ -618,6 +650,44 @@ p.small{
         display: inline-block;
     }
 
+    .ponderation_bloc_container{ 
+        position: relative;
+        border-top:0px dashed #7ab4a7;
+        border-right:0px dashed #7ab4a7;
+        border-bottom:1px dashed #7ab4a7;
+        border-left:0px dashed #7ab4a7;
+        border-width:0px 0px 1px 0px;
+        border-style:dashed dashed dashed dashed;
+        border-color:#7ab4a7 #7ab4a7 #7ab4a7 #7ab4a7;
+    }
+
+    .ponderation_bloc{
+        background-color: #7ab4a7;
+        height: 90px;
+        width: 100%;
+    }
+
+    .ponderation_bloc_container:nth-child(1) .ponderation_bloc:nth-child(2){ opacity: 1; }
+    .ponderation_bloc_container:nth-child(2) .ponderation_bloc:nth-child(2){ opacity: 0.9; }
+    .ponderation_bloc_container:nth-child(2) .ponderation_bloc:nth-child(3){ opacity: 0.75; }
+    .ponderation_bloc_container:nth-child(2) .ponderation_bloc:nth-child(4){ opacity: 0.65; }
+    .ponderation_bloc_container:nth-child(2) .ponderation_bloc:nth-child(5){ opacity: 0.55; }
+    .ponderation_bloc_container:nth-child(3) .ponderation_bloc:nth-child(2){ opacity: 0.4; }
+    .ponderation_bloc_container:nth-child(3) .ponderation_bloc:nth-child(3){ opacity: 0.34; }
+    .ponderation_bloc_container:nth-child(3) .ponderation_bloc:nth-child(4){ opacity: 0.29; }
+    .ponderation_bloc_container:nth-child(3) .ponderation_bloc:nth-child(5){ opacity: 0.24; }
+    .ponderation_bloc_container:nth-child(3) .ponderation_bloc:nth-child(6){ opacity: 0.2; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(2){ opacity: 0.15; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(3){ opacity: 0.13; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(4){ opacity: 0.11; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(5){ opacity: 0.09; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(6){ opacity: 0.08; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(7){ opacity: 0.05; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(8){ opacity: 0.03; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(9){ opacity: 0.02; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(10){ opacity: 0.01; }
+    .ponderation_bloc_container:nth-child(4) .ponderation_bloc:nth-child(11){ opacity: 0.005; }
+
     .ponderation_target{
         background-color: #333;
         height: 160px;
@@ -631,11 +701,37 @@ p.small{
         opacity: 0.75;
         border: 1px dashed #333;
     }
+    .ponderation_zone_header,
+    .ponderation_zone_footer{ 
+        z-index: 2;
+        position: absolute; 
+        left: 50%; 
+        margin-left: -60px; 
+        width: 120px; }
+    .ponderation_zone_header{ top: 20px; }
+    .ponderation_zone_footer{ bottom: 20px; }
+    .ponderation_text-lg,
+    .ponderation_text-sm{
+        color: #111;
+        text-shadow:
+            -1px -1px 0 rgba(255,255,255,0.2),
+            1px -1px 0 rgba(255,255,255,0.2),
+            -1px 1px 0 rgba(255,255,255,0.2),
+            1px 1px 0 rgba(255,255,255,0.2);
+    }
+    .ponderation_text-lg{ font-weight: 600; }
+    .ponderation_text-sm{ }
 
 
     /**
      * END Pondération
      */
+
+     .encadre{ background-color: #f6f7f8; margin-top: 20px; margin-bottom: 40px; padding: 15px; }
+     .encadre-pic{ width: 80px; height:80px; float:left; background-image: url(../people_teaser.png); background-size: cover; margin-right: 15px; }
+     .encadre-header{
+        font-weight: 700;
+     }
 
 /* Small devices (tablets, 768px and up) */
 

@@ -38,6 +38,14 @@ https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-rast
 (("Windatlas_clipped_single_band-EPSG3857@1"=204) * 9) +
 (("Windatlas_clipped_single_band-EPSG3857@1"=187) * 10)
 
+**Grille zones d'exclusion**
+- Sur D3 bounds
+- espacement de la grille 2000
+
+**MAP**
+Echelle: 1:550'000
+EPSG:3857
+
 **Liste des couches**
 
 1.  SWISSTOPO

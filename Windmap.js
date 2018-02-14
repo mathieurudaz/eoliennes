@@ -94,7 +94,7 @@ function Windmap(container, callback){
       requestAnimationFrame(function(){ that.animate() });
       callback();
   });
-
+/*
   d3.json("./parcs_polygons_quantized.topojson", function(error, vd) {
     if (error) throw error;
 
@@ -116,7 +116,7 @@ function Windmap(container, callback){
         .attr("d", that.path);
 
   });
-
+*/
 }
 
 
@@ -152,7 +152,7 @@ Windmap.prototype.updateBoids = function() {
 
 Windmap.prototype.animate = function() {  
   var that = this;
-  this.ctx.fillStyle = "rgba(255,255,255,0.025)"
+  this.ctx.fillStyle = "rgba(0,0,0,0.025)"
   this.ctx.fillRect(0,0,this.width,this.height)
 
   this.updateBoids();

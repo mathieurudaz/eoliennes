@@ -8,7 +8,7 @@ function Boid(x, y, map) {
 
 Boid.prototype.init = function () {
   this.age = 0;
-  this.color = "#000011"//"rgba(255,255,255,0)"//"rgba(160,160,255,0.95)"//"#333333";
+  this.color = "#ffffff"//"rgba(255,255,255,0)"//"rgba(160,160,255,0.95)"//"#333333";
   this.lifespan = Math.random()*50;
   this.position = new Victor(
     this.map.bounds[0] + Math.random()*(this.map.bounds[2]-this.map.bounds[0]), 
