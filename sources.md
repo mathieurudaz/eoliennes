@@ -1,5 +1,11 @@
-**Carte des vents**: https://data.geo.admin.ch/ch.bfe.windenergie-geschwindigkeit_h150/
-**Carte d'élévation**: http://www.opendem.info/definitions.html
+**Carte des vents**: 
+Atlas des vents de la Suisse: vitesse moyenne et distribution des vents à 150 m du sol (Office fédéral de l'énergie)
+https://data.geo.admin.ch/ch.bfe.windenergie-geschwindigkeit_h150/
+État d'actualité 23.02.2016
+
+**Carte d'élévation**: 
+
+http://www.opendem.info/opendemeu_background.html
 
 - Filtre blanc opacite sur carte des vents a part. garder parcs sur carte solide (IMG)
  - Zones d'exclusion en rose/orange, parcs en vert (ou inverse)
