@@ -31,3 +31,42 @@ https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-rast
 (("Windatlas_clipped_single_band-EPSG3857@1"=181) * 8) +
 (("Windatlas_clipped_single_band-EPSG3857@1"=204) * 9) +
 (("Windatlas_clipped_single_band-EPSG3857@1"=187) * 10)
+
+**Liste des couches**
+
+1.  SWISSTOPO
+1a. Geometrie Canton
+1b. Geometrie Communes
+1c. Geometrie Districts
+1d. Points des villes
+    - (Nom)
+1e. (Points labels des villes)
+    - Nom
+
+2.  Parcs
+2a. Geometrie des parcs
+2b. Points centroids des parcs
+    - Nom
+    - Nombre d'eoliennes
+2c. Points labels des parcs
+    - Nom
+    - Nombre d'eoliennes
+2d. Geometrie buffer polyones  5.0km
+2e. Geometrie buffer polyones  7.5km
+2f. Geometrie buffer polyones 10.0km
+
+3.  Windatlas
+3a. Geometrie couches 1 a 7(?)
+
+4.  Viewshed
+4a. Geometrie couches 1 a 3
+4b. Geometrie Forets
+
+5.  Zones d'exclusion
+5a. Geometrie Parcs
+5b. Geometrie IFP
+
+6.  Limites D3
+6a. Geometrie Limites D3
+
+
