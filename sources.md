@@ -43,7 +43,7 @@ https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-rast
 1e. (Points labels des villes)
     - Nom
 
-2.  Parcs
+2.  PARCS
 2a. Geometrie des parcs
 2b. Points centroids des parcs
     - Nom
@@ -55,18 +55,18 @@ https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-rast
 2e. Geometrie buffer polyones  7.5km
 2f. Geometrie buffer polyones 10.0km
 
-3.  Windatlas
+3.  WINDATLAS
 3a. Geometrie couches 1 a 7(?)
 
-4.  Viewshed
+4.  VIEWSHED
 4a. Geometrie couches 1 a 3
 4b. Geometrie Forets
 
-5.  Zones d'exclusion
+5.  ZONES D'EXCLUSION
 5a. Geometrie Parcs
 5b. Geometrie IFP
 
-6.  Limites D3
+6.  LIMITES D3
 6a. Geometrie Limites D3
 
 
