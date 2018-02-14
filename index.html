@@ -647,6 +647,27 @@
 
     <script type="text/javascript">
 
+        $(".loader").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+            $(this).remove();
+        });
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop() > $(window).height() - 50) {
+                $(".navbar.navbar-default").removeClass("navfade");
+            } else {
+                $(".navbar.navbar-default").addClass("navfade");
+            }
+        })
+
+        //$(document).ready(function() {
+
+            $("html").removeClass("loading");
+
+        //});
+    </script>
+
+    <script type="text/javascript">
+
         /**
          * Parks map
          */
@@ -734,8 +755,6 @@
             vdHeight = vdWidth * 
             (vsProjection(vdBounds[0])[1] - vsProjection(vdBounds[1])[1]) /
             (vsProjection(vdBounds[1])[0] - vsProjection(vdBounds[0])[0]);
-
-        console.log( vdWidth )
 
         vsProjection
             .scale(1)
@@ -877,28 +896,6 @@
 
         });
     </script>
-
-    <script type="text/javascript">
-
-        $(".loader").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
-            $(this).remove();
-        });
-
-        $(window).on("scroll", function() {
-            if ($(window).scrollTop() > $(window).height() - 50) {
-                $(".navbar.navbar-default").removeClass("navfade");
-            } else {
-                $(".navbar.navbar-default").addClass("navfade");
-            }
-        })
-
-        $(document).ready(function() {
-
-            $("html").removeClass("loading");
-
-        });
-    </script>
-
 
     <script type="text/javascript">
 
