@@ -7,6 +7,7 @@ body {
     min-height: 100%;
     height: 0px;
     -webkit-font-smoothing: antialiased;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 svg text{
@@ -504,6 +505,29 @@ p.small{
 /**
  * END #2 MAP
  */
+
+/**
+ * SMALL MAPS
+ */
+
+.small_simple_map .small_simple_map_text{
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: -1px -1px 0 rgba(255,255,255,1), 1px -1px 0 rgba(255,255,255,1), -1px 1px 0 rgba(255,255,255,1), 1px 1px 0 rgba(255,255,255,1);
+}
+
+.small_simple_map .small_map_text{
+    position: absolute;
+}
+
+.small_simple_map #small_map_lausanne{ left: 43%; top: 26%; }
+.small_simple_map #small_map_yverdon{ left: 40%; top: 10%; }
+
+ /**
+  * END SMALL MAPS
+  */
 
 
 /**
