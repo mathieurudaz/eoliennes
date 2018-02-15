@@ -210,18 +210,31 @@ Windmap.prototype.animate = function() {
 
   this.updateBoids();
 
-  /*var iiii = 0
+  
+  /**
+   * DEBUG
+   */
+   /*
+  var ppw = this.width / this.cols;
+  var pph = this.height / this.rows;
+  var iiii = 0
 
   for( var i=0; i<this.rows; i++ ){
     for( var j=0; j<this.cols; j++ ){
+        var pppc = Math.floor((this.windData[iiii].z/360)*255)
         //console.log( ((i*this.rows)+j) )
-        this.ctx.fillStyle = "rgb(" + Math.floor(this.windData[iiii].z/1.2 ) + ", 0, 0)";
-        this.ctx.fillRect(j*5, i*5, 5, 5);
+        this.ctx.fillStyle = "rgb(" + pppc + ", "+pppc+", "+pppc+")";
+        this.ctx.fillRect(j*ppw, i*pph, ppw, pph);
 
         iiii += 1;
     }
   }
 */
+  /**
+   * END DEBUG
+   */
+
+
   requestAnimationFrame(function(){ that.animate() });
 }
 
@@ -230,9 +243,12 @@ Windmap.prototype.getFieldBPos = function(pos){
   //var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[1])/(Math.abs(this.bounds[3] - this.bounds[1])/this.rows))
 
   var boidCol =  Math.floor((pos.x-this.bounds[0][0])/(Math.abs(this.bounds[0][0] - this.bounds[1][0])/this.cols))
-  var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[0][1])/(Math.abs(this.bounds[1][1] - this.bounds[0][1])/this.rows))
+  var boidRow =  this.rows-Math.floor(Math.abs(pos.y-this.bounds[0][1])/(Math.abs(this.bounds[1][1] - this.bounds[0][1])/this.rows))
 
   fieldCellIndex = boidCol + this.cols * boidRow;
+
+  //console.log("")
+  //console.log("COL: " + boidCol + ", ROW: " + boidRow + " cell: " + fieldCellIndex)
 
   if (fieldCellIndex >= 0 && fieldCellIndex < this.cols*this.rows){
     return fieldCellIndex
@@ -242,5 +258,6 @@ Windmap.prototype.getFieldBPos = function(pos){
 }
 
 Windmap.prototype.getFieldPosValue = function(pos){
+  //console.log("VAL: " + this.windData[(this.offset*this.cols*this.rows) + this.getFieldBPos(pos)].z)
   return this.windData[(this.offset*this.cols*this.rows) + this.getFieldBPos(pos)]
 }

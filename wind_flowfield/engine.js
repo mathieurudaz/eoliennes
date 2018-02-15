@@ -39,9 +39,12 @@ Boid.prototype.update = function () {
 };
 
 Boid.prototype.orient = function (angle, velocity) {
+  //console.log("")
   var angle = parseInt( angle )
   var angleDem =  angle > 180 ? 180+(180 - angle) : angle
   var angleDem =  angle > 180 ? 180+(180 - angle + 90) : 90 - angle
+  //console.log("angle: " + angle + " - cell: " + this.map.getFieldBPos(this.position))
+
   this.velocity.rotateDeg((angleDem - this.velocity.horizontalAngleDeg()));
 };
 
