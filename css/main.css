@@ -83,7 +83,7 @@ a{
             font-size: 14px;
             font-weight: 400;
             line-height: 1.6;
-            color: #a1a2a4;
+            color: #808184;
         }
         .message{
             font-family: "Montserrat", sans-serif;
@@ -511,7 +511,7 @@ p.small{
  */
 
 .small_simple_map .small_simple_map_text{
-    color: #333;
+    color: #505254;
     font-size: 12px;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;

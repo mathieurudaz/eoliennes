@@ -41,7 +41,7 @@ https://gis.stackexchange.com/questions/141305/conditional-calculation-qgis-rast
 **Grille zones d'exclusion**
 - Avec Grille vecteur ( Processing Toolbox )
 - Sur D3 bounds
-- espacement de la grille 2500
+- espacement de la grille 2000
 - Vector > Geometry toosls > Centroïds
 - Rasterize ( Vector to raster )
 - Point sampling tool
