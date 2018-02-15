@@ -1,17 +1,71 @@
 function Windmap(container, callback){
   var that = this;
-  this.width = $(container).width();
-  this.height = this.width * 0.65;
-  this.bounds = [5.9772400000000001, 47.0698599999999985, 7.3617400000000002, 46.1227000000000018];
+  //this.width = $(container).width();
+  //this.height = this.width * 0.65;
+  //this.bounds = [5.9772400000000001, 47.0698599999999985, 7.3617400000000002, 46.1227000000000018];
   this.boids = [];
 
-  this.color, this.strengthColor, this.normalizedStrength = d3.scaleLinear();
+  //this.color, this.strengthColor, this.normalizedStrength = d3.scaleLinear();
 
   this.windData = null;
   //this.windStrength = null;
   //this.filteredWindData = null;
   this.ij, this.max, this.scale, this.strengthScale;
   this.offset = 0;
+
+  /*this.svg = d3.select(container)
+    .append('svg')
+    .attr("width", this.width*10)
+    .attr("height", this.height*10);
+
+  this.ctx = d3.select(container)
+    .append('canvas')
+    .attr("width", this.width)
+    .attr("height", this.height)
+    .node()
+    .getContext('2d');
+
+  this.ctx.globalAlpha = 0.6;
+  this.ctx.fillStyle = "rgba(0, 0, 0, 0.97)"
+
+  this.cols = 200;
+  this.rows = 145;*/
+
+  /*this.projection = d3.geoMercator()
+    .center([6.65, 46.58])
+    .scale(this.width * 31.75)
+    .translate([this.width/2,this.height/2]);
+
+  this.path = d3.geoPath().projection(this.projection);*/
+
+/** 
+ * NEW
+ */
+
+  this.projection = d3.geoMercator();
+  this.bounds = [[5.93719220465601, 46.1162024335589],
+                 [7.34809579436735, 47.0150236028029]]
+
+  this.path = d3.geoPath()
+    .projection(this.projection);
+
+  this.width = $(container).width()
+  this.height = this.width * 
+    (this.projection(this.bounds[0])[1] - this.projection(this.bounds[1])[1]) /
+    (this.projection(this.bounds[1])[0] - this.projection(this.bounds[0])[0]);
+
+  this.projection
+    .scale(1)
+    .translate([0, 0]);
+
+  var vsb = [this.projection(this.bounds[0]), this.projection(this.bounds[1])]
+    vss = 1 / Math.max((vsb[1][0] - vsb[0][0]) / this.width, (vsb[1][1] - vsb[0][1]) / this.height),
+    vst = [(this.width - vss * (vsb[1][0] + vsb[0][0])) / 2, (this.height - vss * (vsb[1][1] + vsb[0][1])) / 2];
+
+  this.projection
+    .scale(vss)
+    .translate(vst);
+
 
   this.svg = d3.select(container)
     .append('svg')
@@ -31,13 +85,10 @@ function Windmap(container, callback){
   this.cols = 200;
   this.rows = 145;
 
-  this.projection = d3.geoMercator()
-    .center([6.65, 46.58])
-    .scale(this.width * 31.75)
-    .translate([this.width/2,this.height/2]);
-
-  this.path = d3.geoPath().projection(this.projection);
-
+/** 
+ * END NEW
+ */
+ 
 
   d3.json("./wind_flowfield/mask_EPSG4326_quantized.json", function(error, vd) {
       // Draw mask
@@ -81,10 +132,10 @@ function Windmap(container, callback){
 
   });
 
-  d3.csv("./wind_flowfield/wind_direction_concatenated.csv", function(data) {
+  d3.csv("./wind_flowfield/windatlas.csv", function(data) {
       that.windData = data;
 
-      for (var i = 0; i < 10000; ++i) {
+      for (var i = 0; i < 10000; ++i) { //10000
         that.boids.push(new Boid(
           Math.random() * that.width,
           Math.random() * that.height,
@@ -121,16 +172,17 @@ function Windmap(container, callback){
 
 
 Windmap.prototype.wrapAround = function(boid) {
-  if (boid.position.x < this.bounds[0]) {
+
+  if (boid.position.x < this.bounds[0][0]) {
     boid.init();
   }
-  if (boid.position.y < this.bounds[3]) {
+  if (boid.position.y < this.bounds[0][1]) {
     boid.init();
   }
-  if (boid.position.x >= this.bounds[2]) {
+  if (boid.position.x >= this.bounds[1][0]) {
     boid.init();
   }
-  if (boid.position.y >= this.bounds[1]) {
+  if (boid.position.y >= this.bounds[1][1]) {
     boid.init();
   }
 }
@@ -153,16 +205,32 @@ Windmap.prototype.updateBoids = function() {
 Windmap.prototype.animate = function() {  
   var that = this;
   this.ctx.fillStyle = "rgba(0,0,0,0.025)"
+  //this.ctx.fillStyle = "#ffffff"
   this.ctx.fillRect(0,0,this.width,this.height)
 
   this.updateBoids();
 
+  /*var iiii = 0
+
+  for( var i=0; i<this.rows; i++ ){
+    for( var j=0; j<this.cols; j++ ){
+        //console.log( ((i*this.rows)+j) )
+        this.ctx.fillStyle = "rgb(" + Math.floor(this.windData[iiii].z/1.2 ) + ", 0, 0)";
+        this.ctx.fillRect(j*5, i*5, 5, 5);
+
+        iiii += 1;
+    }
+  }
+*/
   requestAnimationFrame(function(){ that.animate() });
 }
 
 Windmap.prototype.getFieldBPos = function(pos){
-  var boidCol =  Math.floor((pos.x-this.bounds[0])/(Math.abs(this.bounds[0] - this.bounds[2])/this.cols))
-  var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[1])/(Math.abs(this.bounds[3] - this.bounds[1])/this.rows))
+  //var boidCol =  Math.floor((pos.x-this.bounds[0])/(Math.abs(this.bounds[0] - this.bounds[2])/this.cols))
+  //var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[1])/(Math.abs(this.bounds[3] - this.bounds[1])/this.rows))
+
+  var boidCol =  Math.floor((pos.x-this.bounds[0][0])/(Math.abs(this.bounds[0][0] - this.bounds[1][0])/this.cols))
+  var boidRow =  Math.floor(Math.abs(pos.y-this.bounds[0][1])/(Math.abs(this.bounds[1][1] - this.bounds[0][1])/this.rows))
 
   fieldCellIndex = boidCol + this.cols * boidRow;
 

@@ -11,8 +11,8 @@ Boid.prototype.init = function () {
   this.color = "#ffffff"//"rgba(255,255,255,0)"//"rgba(160,160,255,0.95)"//"#333333";
   this.lifespan = Math.random()*50;
   this.position = new Victor(
-    this.map.bounds[0] + Math.random()*(this.map.bounds[2]-this.map.bounds[0]), 
-    this.map.bounds[1] + Math.random()*(this.map.bounds[3]-this.map.bounds[1]))
+    this.map.bounds[0][0] + Math.random()*(this.map.bounds[1][0]-this.map.bounds[0][0]), 
+    this.map.bounds[0][1] + Math.random()*(this.map.bounds[1][1]-this.map.bounds[0][1]))
   this.velocity = new Victor(0.0025, 0);
   this.orient(this.map.getFieldPosValue(this.position).z, 0.3)
 };

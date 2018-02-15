@@ -25,50 +25,31 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>272080.91640218754764646</xmin>
-      <ymin>5114504.83020504005253315</ymin>
-      <xmax>367993.80034568614792079</xmax>
-      <ymax>5207230.4971139170229435</ymax>
+      <xmin>666812.35278770001605153</xmin>
+      <ymin>5766568.02060501649975777</ymin>
+      <xmax>812305.6915834816172719</xmax>
+      <ymax>5980951.80167512595653534</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs</proj4>
-        <srsid>3116</srsid>
-        <srid>32632</srid>
-        <authid>EPSG:32632</authid>
-        <description>WGS 84 / UTM zone 32N</description>
-        <projectionacronym>utm</projectionacronym>
+        <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+        <srsid>3857</srsid>
+        <srid>3857</srid>
+        <authid>EPSG:3857</authid>
+        <description>WGS 84 / Pseudo Mercator</description>
+        <projectionacronym>merc</projectionacronym>
         <ellipsoidacronym>WGS84</ellipsoidacronym>
         <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215134606578"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Exclusion_IFP_simplified_EPSG3263220180215140314438"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135950216"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135643390"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:3035" srcDatumTransform="-1" destDatumTransform="-1" layerid="parcs_polygons20180215134519673"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135531533"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="VD_canton_EPSG3263620180215134211437"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Grid_2500_EPSG3263220180215135514384"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215134649134"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215140103955"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="exclusion_payerne_points_EPSG3263220180215134405187"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135439229"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="ttttttttt20180215135605161"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Exclusion_IFP_clipped_EPSG3263220180215134439269"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="VD_communes_EPSG3263620180215134222987"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="VD_districts_EPSG3263220180215134253067"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Rasterisé20180215135355312"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="parcs_polygons_EPSG3263220180215134553381"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Grid_2000_EPSG3263220180215135836545"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135846439"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="D3_bounds_EPSG3263220180215134329672"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180215135818479"/>
-      <layer_coordinate_transform destAuthId="EPSG:32632" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="ttttttt20180215135925609"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="D3_bounds_EPSG3263220180215134329672"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="VD_districts_EPSG3263220180215134253067"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Exclusion_IFP_simplified_EPSG3263220180215140314438"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="VD_canton_EPSG3263620180215134211437"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
@@ -1086,19 +1067,47 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
   </projectlayers>
   <properties>
-    <Measurement>
-      <DistanceUnits type="QString"></DistanceUnits>
-      <AreaUnits type="QString"></AreaUnits>
-    </Measurement>
-    <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
-      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
-      <ProjectCRSID type="int">3452</ProjectCRSID>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WFSUrl type="QString"></WFSUrl>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WFSLayers type="QStringList"/>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <WMSRestrictedComposers type="QStringList"/>
+    <WMSRestrictedLayers type="QStringList"/>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
     <Gui>
       <SelectionColorBluePart type="int">0</SelectionColorBluePart>
       <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
@@ -1150,13 +1159,38 @@ def my_form_open(dialog, layer, feature):
         <value>0.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-    </PositionPrecision>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:3857</ProjectCrs>
+      <ProjectCRSID type="int">3857</ProjectCRSID>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <RandomColors type="bool">true</RandomColors>
+      <AlphaInt type="int">255</AlphaInt>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <WMSUrl type="QString"></WMSUrl>
   </properties>
   <visibility-presets/>
 </qgis>
