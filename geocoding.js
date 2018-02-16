@@ -28,7 +28,11 @@ var geocoding = (function(){
             type: "GET",   
             dataType: 'json',
             cache: false,
-            success: function(response){   
+            success: function(response){
+
+                console.log( response )
+                console.log( response.results[0].geometry.location_type )
+
                 var position = response.results[0].geometry.location
                 var projectedPosition = projection([position.lng, position.lat])
                 var vsProjectedPosition = vsProjection([position.lng, position.lat])
@@ -57,6 +61,8 @@ var geocoding = (function(){
                 
                 console.log(pixelData)
                 // Change the values according to the result
+                // TODO: parse all entries in address_components. find VAUD
+                if(response.results[0].address_components[2].long_name != "Vaud") console.log( "Not in VD!" )
                 $("b.special").text(Math.ceil(pixelData[0]/5.44) > 0 ? Math.ceil(pixelData[0]/5.44) + " eoliennes" : "aucune eolienne")
 
                 // DEBUG: Show the marker on the viewshed map

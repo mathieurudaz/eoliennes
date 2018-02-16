@@ -144,16 +144,17 @@
             </div>
         </div>
     </div>
-    <div class="container text-center">
+    <div class="container text-left">
         <!--<div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div class="special lg">Des éoliennes visibles de chez vous?</div>
             </div>
         </div>-->
         <div class="row" style="margin-top: 20px;">
-            <div class="col-md-offset-3 col-md-6">
-                <input id="pac-input" class="controls" type="text" placeholder="Saisissez votre adresse">
+            <div class="col-md-offset-1 col-md-10">
+                <input id="pac-input" class="controls" type="text" placeholder="Votre adresse">
                 <div class="special xs">Essayez par exemple <a href="#">Lausanne</a>, <a href="#">Parc de Sauvabelin</a>, <a href="#">Col des Mosses</a> ou <a href="#">Lac de Joux</a>.</div>
+                <div class="special xs">Seules les adresses situées dans le canton de Vaud sont prises en compte.</div>
             </div>
         </div>
         <div class="row message_container" style="margin-top: 40px; margin-bottom: 40px;">
@@ -174,13 +175,14 @@
     <div class="container" style="margin-top: 60px;">
         <div class="row text-center">
             <div class="col-md-offset-2 col-md-8">
+                <h2>Les projets de parcs éoliens</h2>
                 <div class="viewshed-legend">
                     <div class="legend-bloc">
                         <div class="legend-text">Parc éolien</div>
                         <div class="legend-color"></div>                        
                     </div>
                     <div class="legend-bloc">
-                        <div class="legend-text">Limite de visibilité</div>
+                        <div class="legend-text">Zone d'exclusion</div>
                         <div class="legend-color"></div>                        
                     </div>
                 </div>
@@ -209,19 +211,19 @@
                             <div class="legend-sub-color"></div>
                         </div>
                         <div class="legend-subtext">
-                            <div class="legend-sub-text">&lt;5</div>
+                            <div class="legend-sub-text">&lt;=5</div>
                             <div class="legend-sub-text">&gt;5</div>
                             <div class="legend-sub-text">&gt;15</div>
                         </div>
                     </div>
                     <div class="legend-bloc">
                         <div class="legend-text">Impact visuel</div>
-                        <div class="legend-color"></div>                        
+                        <div class="legend-color"><img src="viewshed_legend_1.png"></div>
                     </div>
                     <div class="legend-bloc">
                         <div class="legend-text">Forêt</div>
                         <div class="legend-subtext">Visibilité nulle</div>
-                        <div class="legend-color"></div>
+                        <div class="legend-color"><img src="viewshed_legend_2.png"></div>
                     </div>
                     <div class="legend-bloc">
                         <div class="legend-text">Parc éolien</div>
@@ -275,16 +277,19 @@
     <div class="container section">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo. Aliquam non imperdiet turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. <b>blandit id orci non, interdum cursus erat</b>. Sed vestibulum orci sapien, vel dictum erat consectetur eget. Vivamus purus sapien.</p>
+                <p>Le choix des sites propices à la construction d'éoliennes dépend de la vitesse des vents à hauteur de rotor, des zones d'exclusions et des périmètres des villes alentours.</p>
+
+                <p>L'Atlas des vents de la Suisse décrit les conditions de vent à cinq hauteurs au-dessus du niveau du sol à 150m au dessus du sol (hauteur moyenne de rotor). Les indications représentent une estimation grossière des conditions de vent. En cas d'intérêt pour développer un site, il est indispensable d'effectuer des mesures sur place.</p>
             </div>
         </div>
     </div>
-    <div class="container image" style="padding-bottom: 0px;">
+    <div class="container image" style="padding-bottom: 0px; padding-top: 0px;">
         <div class="row text-center">
             <div class="col-md-offset-2 col-md-8">
-                <div class="viewshed-legend">
+                <h2>Le choix des emplacements</h2>
+                <div class="windatlas-legend">
                     <div class="legend-bloc">
-                        <div class="legend-text">Force du vent</div>
+                        <div class="legend-text">vitesse moyenne des vents à 150m</div>
                         <div class="legend-color">
                             <div class="legend-sub-color"></div>
                             <div class="legend-sub-color"></div>
@@ -294,6 +299,9 @@
                             <div class="legend-sub-color"></div>
                         </div>
                         <div class="legend-subtext">
+                            <div class="legend-sub-text">&lt;5</div>
+                            <div class="legend-sub-text">&gt;5</div>
+                            <div class="legend-sub-text">&gt;15</div>
                             <div class="legend-sub-text">&lt;5</div>
                             <div class="legend-sub-text">&gt;5</div>
                             <div class="legend-sub-text">&gt;15</div>
@@ -325,13 +333,13 @@
                     <div class="col-md-4">
                         <div class="small_simple_map">
                             <div class="small_simple_map_text">
-                                <div class="small_map_text" id="small_map_lausanne">Aérodrome de Payerne</div>
-                                <div class="small_map_text" id="small_map_yverdon">Radar de Torny</div>
+                                <div class="small_map_text" id="small_map_lausanne" style="top:8%;">Aérodrome de Payerne</div>
+                                <div class="small_map_text" id="small_map_yverdon" style="top:20%;">Radar de Torny</div>
                             </div>
                             <img src="exclusion_small_2.png">
                         </div>
                         <div class="zoom-text">
-                            <p class="special md light"><b>Texte Payerne et radar Torny</b>. Aliquam non imperdiet turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                            <p class="special md light"><b>Zone tampon autour de l'aérodrome de Payerne et du radar de Torny</b> Un rayon de 20km Interférences avec les radars des Forces aériennes. Le Département de la défence (DDPS) parle «d’obstacles à la navigation aérienne» et de «conséquences sur les systèmes de radars».</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -531,118 +539,232 @@
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>Bavois</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Bel Coster</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Bière</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Bottens</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>Cronay</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Chavanne sur Moudon</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Daillens/Oulens</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Eoljoux</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>EolJorat Nord</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>EolJorat Sud</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Essertine-sur-Rolle</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Grandevent</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>Grandsonnaz</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Grati</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Mollendruz</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Provence</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>Tous-Vents</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Vaudair</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Villars-le-terroir</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
             <div class="col-md-3 parc-bloc">
                 <h3>Vuarrens</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 parc-bloc">
                 <h3>Ste-Croix</h3>
-                <p>Morbi rhoncus suscipit ex</p>
-                <p>Oppositions</p>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr><td>Commune(s)</td><td>La Praz, Juriens</td></tr>
+                    <tr><td>Promoteur</td><td>Aliquam non</td></tr>
+                    <tr><td>Eoliennes</td><td>12</td></tr>
+                    <tr><td>Puissance totale</td><td>25 GW/h</td></tr>
+                </table>
+                <p>Remarques non congue libero laoreet eget</p>
+            </div>
+        </div>
+    </div>
+    <div class="container section" style="margin-top: 80px;">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h2>Titre méthodologie</h2>
+                <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo. Aliquam non imperdiet turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Nunc id magna id massa facilisis vulputate nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo.</p>
             </div>
         </div>
     </div>
