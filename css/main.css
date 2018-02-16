@@ -601,8 +601,9 @@ p.small{
 
 .windatlas-legend .legend-bloc{ width: 240px; }
 .windatlas-legend .legend-color{ width: 180px; }
-
-.windatlas-legend .legend-bloc .legend-sub-color:nth-child(1){ background-color: #d1e7e4; }
+.windatlas-legend .legend-bloc .legend-sub-color,
+.windatlas-legend .legend-bloc .legend-sub-text{ width: 90px; }
+.windatlas-legend .legend-bloc .legend-sub-color:nth-child(1){ background-color: #f5f6f7; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(2){ background-color: #9fccc1; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(3){ background-color: #79b4a7; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(4){ background-color: #d1e7e4; }
