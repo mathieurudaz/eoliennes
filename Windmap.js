@@ -100,7 +100,7 @@ function Windmap(container, callback){
         .attr("d", that.path);
 
       // Places name and coordinates
-      /*var cities = [
+      var cities = [
         {name: 'Lausanne', cord: [6.62, 46.51]},
         {name: 'Yverdon', cord: [6.632, 46.775]},
         {name: 'Montreux', cord: [6.914, 46.432]},
@@ -115,7 +115,8 @@ function Windmap(container, callback){
         .append('circle')
         .attr("cx", 0)
         .attr("cy", 0)
-        .attr('r', 2)
+        .attr('r', 4)
+        .attr("class", "windatlas-circle")
         .attr("transform", function(d, i) {return "translate(" + that.projection(d.cord)[0] + "," + that.projection(d.cord)[1] + ")";});
       
       // Draw places text
@@ -123,12 +124,13 @@ function Windmap(container, callback){
         .data(cities)
         .enter()
         .append("text")
+        .attr("class", "windatlas-label")
         .attr("x", 0)
         .attr("y", 0)
         .attr("transform", function(d, i) {return "translate(" + that.projection(d.cord)[0] + "," + that.projection(d.cord)[1] + ")";})
         .attr('text-anchor', 'middle')
-        .attr('dy', -5)
-        .text( function (d) { return d.name; });*/
+        .attr('dy', -8)
+        .text( function (d) { return d.name; });
 
   });
 
