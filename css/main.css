@@ -627,6 +627,22 @@ p.small{
     opacity: 0.4;
   }
 
+.windatlas-circle{
+    fill: #ffffff;
+    stroke: rgba(0,0,0,0.5);
+    opacity: 0.95;
+    stroke-width:1px;
+    cursor: pointer;
+}
+
+.windatlas-label{
+    fill: #404244;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: -1px -1px 0 rgba(255,255,255,1), 1px -1px 0 rgba(255,255,255,1), -1px 1px 0 rgba(255,255,255,1), 1px 1px 0 rgba(255,255,255,1);
+}
+
  /**
   * END #3 MAP
   */
