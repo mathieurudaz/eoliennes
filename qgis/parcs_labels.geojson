@@ -1,0 +1,26 @@
+{
+"type": "FeatureCollection",
+"name": "parcs_labels",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1.0, "SITE": "Bel Coster", "TYPESITE": 1, "Shape_Leng": 11581.18929, "Shape_Area": 3701411.3448600001 }, "geometry": { "type": "Point", "coordinates": [ 715530.583717058645561, 5902077.684517538174987 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2.0, "SITE": "EolJorat Nord", "TYPESITE": 1, "Shape_Leng": 11098.25338, "Shape_Area": 7432127.7356500002 }, "geometry": { "type": "Point", "coordinates": [ 747004.246202978305519, 5878721.930726614780724 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3.0, "SITE": "Provence", "TYPESITE": 1, "Shape_Leng": 13987.43521, "Shape_Area": 7825795.8226800002 }, "geometry": { "type": "Point", "coordinates": [ 740900.264526517363265, 5925022.163329297676682 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4.0, "SITE": "Vaudair", "TYPESITE": 2, "Shape_Leng": 18113.63054, "Shape_Area": 8307671.1117099999 }, "geometry": { "type": "Point", "coordinates": [ 753932.881227297591977, 5892583.803522597067058 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5.0, "SITE": "Chavanne sur Moudon", "TYPESITE": 1, "Shape_Leng": 16215.14915, "Shape_Area": 4473829.6885500001 }, "geometry": { "type": "Point", "coordinates": [ 757261.962385403108783, 5881852.682295056991279 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6.0, "SITE": "Grandevent", "TYPESITE": 1, "Shape_Leng": 8834.48681, "Shape_Area": 4767938.7110400004 }, "geometry": { "type": "Point", "coordinates": [ 732995.275423948536627, 5917493.280207479372621 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 7.0, "SITE": "Grandsonnaz", "TYPESITE": 1, "Shape_Leng": 13182.29469, "Shape_Area": 7495042.5205199998 }, "geometry": { "type": "Point", "coordinates": [ 720123.25412101985421, 5920726.489327629096806 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 8.0, "SITE": "Ste-Croix", "TYPESITE": 1, "Shape_Leng": 8672.34552, "Shape_Area": 3326319.2220800002 }, "geometry": { "type": "Point", "coordinates": [ 720746.602584607200697, 5910570.015299398452044 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 9.0, "SITE": "EolJorat Sud", "TYPESITE": 1, "Shape_Leng": 14714.07137, "Shape_Area": 6785973.7103899997 }, "geometry": { "type": "Point", "coordinates": [ 735836.937670869636349, 5870528.06737457588315 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 10.0, "SITE": "Mollendruz", "TYPESITE": 1, "Shape_Leng": 13496.09312, "Shape_Area": 6135353.6672499999 }, "geometry": { "type": "Point", "coordinates": [ 711931.388213384663686, 5887891.840952839702368 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 11.0, "SITE": "Bavois", "TYPESITE": 1, "Shape_Leng": 7114.20188, "Shape_Area": 3248553.1580400001 }, "geometry": { "type": "Point", "coordinates": [ 730076.227726790122688, 5888577.263700602576137 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 12.0, "SITE": "Tous-Vents", "TYPESITE": 2, "Shape_Leng": 11647.05283, "Shape_Area": 5226854.6012800001 }, "geometry": { "type": "Point", "coordinates": [ 741702.26689131045714, 5894793.775224697776139 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 13.0, "SITE": "Essertines sur Rolle", "TYPESITE": 2, "Shape_Leng": 8639.29266, "Shape_Area": 4901750.2827700004 }, "geometry": { "type": "Point", "coordinates": [ 701376.608810840640217, 5858395.11113297007978 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 14.0, "SITE": "Grati", "TYPESITE": 1, "Shape_Leng": 7670.24076, "Shape_Area": 3137042.3787500001 }, "geometry": { "type": "Point", "coordinates": [ 713929.075900593190454, 5894013.581331889145076 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 15.0, "SITE": "Vuarrens", "TYPESITE": 2, "Shape_Leng": 10431.84099, "Shape_Area": 4596136.0993999997 }, "geometry": { "type": "Point", "coordinates": [ 735227.063720376929268, 5892027.111361757852137 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 16.0, "SITE": "Villars-le-terroir", "TYPESITE": 2, "Shape_Leng": 7056.23413, "Shape_Area": 2837341.0281400001 }, "geometry": { "type": "Point", "coordinates": [ 737568.310059203300625, 5886256.852041270583868 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 17.0, "SITE": "Bière", "TYPESITE": 1, "Shape_Leng": 7124.88821, "Shape_Area": 3725061.8746600002 }, "geometry": { "type": "Point", "coordinates": [ 707338.667087577981874, 5867659.785601169802248 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 18.0, "SITE": "Bottens", "TYPESITE": 2, "Shape_Leng": 8102.85392, "Shape_Area": 4077640.1131500001 }, "geometry": { "type": "Point", "coordinates": [ 733629.279102707398124, 5879011.401317314244807 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 19.0, "SITE": "Eoljoux", "TYPESITE": 7, "Shape_Leng": 8084.01665, "Shape_Area": 4071944.9569000001 }, "geometry": { "type": "Point", "coordinates": [ 687368.067135744728148, 5868563.702556447125971 ] } }
+]
+}

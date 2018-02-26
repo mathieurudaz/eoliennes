@@ -11,7 +11,10 @@ body {
 }
 
 svg text{
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-shadow: -1px -1px 0 rgba(255,255,255,1), 1px -1px 0 rgba(255,255,255,1), -1px 1px 0 rgba(255,255,255,1), 1px 1px 0 rgba(255,255,255,1);
 }
 
 /**
@@ -36,12 +39,12 @@ svg text{
 
 .colorized,
 a{
-    color: #ed3d6b;
+    color: #fe0d96;
 }
 
         b.special{
             font-weight: 500;
-            color:#ed3d6b;
+            color:#fe0d96;
             font-size: 40px
         }
 
@@ -105,23 +108,26 @@ a{
             font-size: 32px;
             padding: 45px 45px 15px 45px;
             font-weight: 100;
-            color: #ed3d6b;
+            color: #fe0d96;
             text-align: center;
             border:0px;
             border-bottom: 3px solid #ef056b;
         }
+        #pac-input:focus{
+            outline: none;
+        }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #ed3d6b;
+            color: #fe0d96;
             opacity: 1;
         }
 
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #ed3d6b;
+            color: #fe0d96;
             opacity: 1;
         }
 
         ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #ed3d6b;
+            color: #fe0d96;
             opacity: 1;
         }
 
@@ -453,6 +459,11 @@ p.small{
     cursor: pointer;
 }
 
+.park-catcher{
+    opacity: 0;
+    cursor: pointer;
+}
+
 .viewshed-parc_label{
     fill: rgba(0,0,0,0.75);
     font-size:  16px;
@@ -463,6 +474,7 @@ p.small{
     stroke-linejoin: miter;
     font-weight: 700;
     visibility: hidden;
+    pointer-events: none;
 }
 
 .viewshed-parc_label.small{
@@ -474,6 +486,7 @@ p.small{
     stroke-linecap: butt;
     stroke-linejoin: miter;
     font-weight: 600;
+    pointer-events: none;
 }
 
 #user-arrow{
@@ -484,7 +497,7 @@ p.small{
 }
 
 .user-circle{
-    fill: #f0776e;
+    fill: #ffffff;
     stroke: rgba(0,0,0,0.5);
     opacity: 0.95;
     stroke-width:1px;
@@ -493,13 +506,13 @@ p.small{
 
 .user-text{
     color: #333;
-    font-size:  14px;
+    font-size:  16px;
     paint-order: stroke;
     stroke: rgba(255,255,255,0.75);
     stroke-width: 2px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
-    font-weight: 600;
+    font-weight: 700;
     visibility: hidden;
 }
 
@@ -604,7 +617,7 @@ p.small{
 .windatlas-legend .legend-bloc .legend-sub-color,
 .windatlas-legend .legend-bloc .legend-sub-text{ width: 90px; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(1){ background-color: #f5f6f7; }
-.windatlas-legend .legend-bloc .legend-sub-color:nth-child(2){ background-color: #9fccc1; }
+.windatlas-legend .legend-bloc .legend-sub-color:nth-child(2){ background-color: #fd6fab; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(3){ background-color: #79b4a7; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(4){ background-color: #d1e7e4; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(5){ background-color: #9fccc1; }
