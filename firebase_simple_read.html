@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script type="text/javascript">
+
+  var config = {
+    apiKey: "AIzaSyAHTu9tt-u1F3A80UoijAtM6IrNsM1xCTM",
+    authDomain: "eoliennes-d24f6.firebaseapp.com",
+    databaseURL: "https://eoliennes-d24f6.firebaseio.com/",
+    storageBucket: "eoliennes-d24f6.appspot.com"
+  };
+
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      console.log("Already logged as:")
+      console.log((isAnonymous ? "Anonymous" : uid));
+    } else {
+      firebase.auth().signInAnonymously().then(function() {
+          console.log("");
+          console.log("Now logged as:")
+          console.log(firebase.auth().currentUser);
+      }, function(error) {
+          console.log(error)
+      });
+    }
+  });
+
+  firebase.database().ref('/data').startAt(3).once('value').then(function(snapshot) {
+    console.log( "OK" )
+    console.log( snapshot.val() )
+  });
+
+</script>
+
+</body>
+</html>
