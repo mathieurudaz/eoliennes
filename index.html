@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/spinner.css">
     <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/minimal/pink.css" />
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
@@ -159,7 +159,7 @@
                 <div class="special xs">Seules les adresses situées dans le canton de Vaud sont prises en compte.</div>
             </div>
         </div>
-        <div class="row message_container" style="margin-top: 40px; margin-bottom: 40px;">
+        <div class="row message_container text-center" style="margin-top: 40px; margin-bottom: 40px;">
             <div class="col-md-offset-3 col-md-6">
                 <div><div class="spinner lds-ring"><div></div><div></div><div></div><div></div></div></div>
                 <div class="message">Il y a de fortes chances pour que vous puissiez voir
@@ -194,7 +194,7 @@
     <div class="container " style="margin-top: 60px; margin-bottom: 0px;padding-bottom: 0px;">
         <div class="row text-center">
             <div class="col-md-offset-1 col-md-10">
-                <h2>La visibilité</h2>
+                <h2>Jusqu'où les éoliennes seront visibles</h2>
                 <div class="viewshed-legend">
                     <div class="legend-bloc">
                         <div class="legend-text">Eoliennes visibles</div>
@@ -216,7 +216,7 @@
                     </div>-->
                 </div>
                 <div id="viewshed-container">
-                    <img src="map_2-viewshed.png" style="width: 100%; height: auto;">
+                    <img src="map_2-viewshedc.png" style="width: 100%; height: auto;">
                     <svg version="1.1" id="user-arrow" 
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -233,26 +233,26 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="margin-top: 0px;padding-top: 0px;">
+    <div class="container">
         <div class="row text-left">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="col-md-offset-1 col-md-10">
                 <div class="row">
                     <div class="col-md-4">
                         <img src="zoom-1.png">
                         <div class="zoom-text">
-                            <p class="special md light"><b>Aliquam non imperdiet</b> turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                            <p class="special md light"><b>Chemin pédestre - tour du lac de Joux</b> turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <img src="zoom-2.png">
                         <div class="zoom-text">
-                            <p class="special md light"><b>Aliquam non imperdiet turpis.</b> Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                            <p class="special md light"><b>Concentration importante</b> Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <img src="zoom-3.png">
                         <div class="zoom-text">
-                            <p class="special md light"><b>Aliquam non imperdiet</b> turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                            <p class="special md light"><b>Lac léman</b> turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
                         </div>
                     </div>
                 </div>
@@ -269,7 +269,7 @@
             <div class="col-md-offset-3 col-md-6 encadre">
                 <div class="encadre-text-container">
                     <div class="encadre-pic"></div>
-                    <div class="encadre-header">Titre portraits, lien nouvelle fenêtre vers articles 24heures</div>
+                    <div class="encadre-header">Titre article A, lien nouvelle fenêtre vers article 24heures</div>
                     <div class="encadre-subheader">Nunc id magna id massa facilisis vulputate nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur</div>
                 </div>
             </div>
@@ -289,10 +289,8 @@
                         <div class="legend-text">vitesse moyenne des vents à 150m</div>
                         <div class="legend-color">
                             <div class="legend-sub-color"></div>
-                            <div class="legend-sub-color"></div>
                         </div>
                         <div class="legend-subtext">
-                            <div class="legend-sub-text">&lt;6.0 m/s</div>
                             <div class="legend-sub-text">&ge;6.0 m/s</div>
                         </div>
                     </div>
@@ -347,50 +345,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="container image">
-        <div class="row text-center">
-            <div class="col-md-offset-3 col-md-6">
-                <h2>Titre choix emplacement des parcs</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="exclusion-0.png">
-                            <div class="swiper-caption">Force des vents</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="exclusion-1.png">
-                            <div class="swiper-caption">Inventaire fédéral des paysages</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="exclusion-2.png">
-                            <div class="swiper-caption">Districts francs</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="exclusion-1.png">
-                            <div class="swiper-caption">Hauts marais</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="exclusion-2.png">
-                            <div class="swiper-caption">Bas marais</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="price_slider-container">
-                    <input id="map_slider" data-slider-id='price_slider' type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0" />
-                </div>
-            </div>
-        </div>
-    </div>-->
     <div class="container section" style="margin-top: 20px;">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
@@ -401,7 +355,7 @@
             <div class="col-md-offset-3 col-md-6 encadre">
                 <div class="encadre-text-container">
                     <div class="encadre-pic"></div>
-                    <div class="encadre-header">Titre portraits, lien nouvelle fenêtre vers articles 24heures</div>
+                    <div class="encadre-header">Titre Article B, lien nouvelle fenêtre vers article 24heures</div>
                     <div class="encadre-subheader">Nunc id magna id massa facilisis vulputate nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur</div>
                 </div>
             </div>
@@ -415,109 +369,16 @@
             <div class="col-md-offset-3 col-md-6 encadre">
                 <div class="encadre-text-container">
                     <div class="encadre-pic"></div>
-                    <div class="encadre-header">Titre portraits, lien nouvelle fenêtre vers articles 24heures</div>
+                    <div class="encadre-header">Titre Article C, lien nouvelle fenêtre vers article 24heures</div>
                     <div class="encadre-subheader">Nunc id magna id massa facilisis vulputate nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur</div>
                 </div>
             </div>
         </div>
     </div>
-    <!--<div class="container-fluid section container-dark">
-        <div class="row text-center">
-            <div class="col-xs-offset-0 col-xs-12 col-md-offset-4 col-md-4">
-                <h2>Titre impact visuel</h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
-                <div class="ponderation_bloc_container">
-                    <div class="ponderation_zone_header">
-                        <div class="ponderation_text-lg">Zone centrale</div>
-                        <div class="ponderation_text-sm">0 - 0,5 km</div>
-                    </div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_zone_footer">
-                        <div class="ponderation_text-lg">100%</div>
-                    </div>
-                </div>
-                <div class="ponderation_bloc_container">
-                    <div class="ponderation_zone_header">
-                        <div class="ponderation_text-lg">Zone proche</div>
-                        <div class="ponderation_text-sm">0,5 - 2,5 km</div>
-                    </div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_zone_footer">
-                        <div class="ponderation_text-lg">70%</div>
-                    </div>
-                </div>
-                <div class="ponderation_bloc_container">
-                    <div class="ponderation_zone_header">
-                        <div class="ponderation_text-lg">Zone moyenne</div>
-                        <div class="ponderation_text-sm">2,5 - 5 km</div>
-                    </div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_zone_footer">
-                        <div class="ponderation_text-lg">30%</div>
-                    </div>
-                </div>
-                <div class="ponderation_bloc_container">
-                    <div class="ponderation_zone_header">
-                        <div class="ponderation_text-lg">Zone éloignée</div>
-                        <div class="ponderation_text-sm">5 - 10 km</div>
-                    </div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_bloc"></div>
-                    <div class="ponderation_zone_footer">
-                        <div class="ponderation_text-lg">5%</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <!--<div class="container-fluid section container-dark">
-        <div class="row text-center">
-            <div class="col-md-offset-3 col-md-6">
-                <h2>Titre impact visuel V2</h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="ponderation2_container">
-                    <div class="ponderation_target"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-offset-3 col-md-6">
-                <div class="price_slider-container">
-                    <input id="view_slider" type="text"
-                        data-slider-id='view_slider'
-                        data-slider-min="0"
-                        data-slider-max="4"
-                        data-slider-step="1"
-                        data-slider-value="0" />
-                </div>
-            </div>
-        </div>
-    </div>-->
     <div class="container section">
         <div class="row text-center">
             <div class="col-md-offset-3 col-md-6">
-                <h2>Des éoliennes seront-elles visibles depuis mon parcours de randonnée favori?</h2>
+                <h2>Titre carte détaillée feugiat nec tempus</h2>
             </div>
         </div>
         <div class="row">
@@ -528,12 +389,90 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div id="mapbox" style="width: 100%;"></div>
+            </div>
+            <div class="col-md-4 mapbox-infobox">
+                <div class="row mapbox-infobox-header">
+                    <div class="col-md-12">
+                        <h2>Afficher ou masquer des éléments</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mapbox-layers-panel">
+                            <input type="checkBox" id="layer1" name="radio-group" data-layerid="Marais">
+                            <label for="layer1">Hauts et bas marais</label>
+                            <input type="checkBox" id="layer2" name="radio-group" data-layerid="Pro natura">
+                            <label for="layer2">Réserves Pro Natura</label>
+                            <input type="checkBox" id="layer3" name="radio-group" data-layerid="Districts francs">
+                            <label for="layer3">Districts francs</label>
+                            <input type="checkBox" id="layer4" name="radio-group" data-layerid="IFP">
+                            <label for="layer4">Inventaire fédéral des paysages</label>
+                            <input type="checkBox" id="layer5" name="radio-group" data-layerid="Parcs" checked>
+                            <label for="layer5">Parcs suisses</label>
+                            <input type="checkBox" id="layer6" name="radio-group" data-layerid="ISOS">
+                            <label for="layer6">Sites construits d'importance nationale</label>
+                            <input type="checkBox" id="layer7" name="radio-group" data-layerid="Radars">
+                            <label for="layer7">Radars militaires</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mapbox-section">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="mapbox_section-content">
+                            <div>
+                                <h2>Parcs et réserves naturelles</h2>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mapbox-section">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="mapbox_section-content">
+                            <div>
+                                <h2>Districts francs</h2>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mapbox-section">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="mapbox_section-content">
+                            <div>
+                                <h2>Radars militaires</h2>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mapbox-section">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="mapbox_section-content">
+                            <div>
+                                <h2>Sites construits d'importance nationale</h2>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mapbox-section">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="mapbox_section-content">
+                            <div>
+                                <p>Curabitur scelerisque augue vel dignissim tempor. Sed semper blandit luctus. Nulla imperdiet ut magna vitae lacinia. Cras vitae sapien ligula. Integer mollis leo et scelerisque venenatis. Etiam sed leo sollicitudin, condimentum turpis eget, ullamcorper lacus. Proin vitae augue ligula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="margin-top: 90px;">
         <div class="row text-center">
             <div class="col-md-offset-3 col-md-6">
                 <h2>Titre données techniques des parcs</h2>
@@ -745,8 +684,10 @@
     <div class="container section" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <h2>Titre méthodologie</h2>
-                <p>Ut felis nunc, lobortis ac lorem sit amet, egestas condimentum eros. Aenean egestas sodales nisi, non congue libero laoreet eget. Phasellus est sem, feugiat nec tempus nec, vestibulum quis leo. Aliquam non imperdiet turpis. Mauris pellentesque nisi eu tortor aliquet ullamcorper. Sed posuere feugiat quam, congue finibus magna mollis in. Nunc id magna id massa facilisis vulputate nec et nulla. Sed vestibulum orci sapien, vel dictum erat consectetur eget.</p>
+                <h2>Méthodologie</h2>
+                <p>Les zones de visiblité des éoliennes ont été calculées à partir d'une carte d'élévation du territoire <a href="#">Lien vers source 1</a>, des forêts issues d'Open Street Map. etc. Hauteur base-rotor, visibilité 10km</p>
+                <p>Les promoteurs des parcs A, B, C, D, ayant refusé de nous donner l'emplacement de leurs futures éoliennes, nous avons placé aléatoirement un nombre de mâts équivalent aux données techniques de chaque parc dans leur périmètre, etc.</p>
+                <p><a href="#">Lien vers source 1</a></p>
             </div>
         </div>
         <div class="row">
@@ -755,6 +696,7 @@
             </div>
         </div>
     </div>
+    <div id="debug-map" style="display: block;"></div>
     <footer>
         <div class="container">
             <div class="row">
@@ -789,6 +731,9 @@
     <script src="Windmap.js"></script>
     <script src="wind_flowfield/victor.min.js"></script>
     <script src="wind_flowfield/engine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
     <script type="text/javascript">
 
@@ -804,76 +749,27 @@
             }
         })
 
-        //$(document).ready(function() {
+        $("html").removeClass("loading");
 
-            $("html").removeClass("loading");
+        $(document).ready(function() {
 
-        //});
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_minimal-pink',
+                radioClass: 'iradio_minimal-pink',
+                increaseArea: '20%' // optional
+            });
+
+        });
+
     </script>
 
     <script type="text/javascript">
 
         /**
-         * Parks map
+         * Wind atlas
          */
 
          var windmap = new Windmap("#windatlas-container", function(){});
-
-
-    </script>
-
-    <script type="text/javascript">
-
-        /**
-         * Pondération
-         */
-
-        // Slider
-        $('#view_slider').slider({
-            tooltip: "hide",
-            formatter: function(value) {
-                return 'Current value: ' + value;
-            }
-        });
-
-        // Slider change event
-        $("#view_slider").on("change", function(slideEvt) {
-            $(".ponderation_target").css("opacity", 1-slideEvt.value.newValue/4) 
-        });
-
-
-    </script>
-
-    <script type="text/javascript">
-
-        /**
-         * Zones d'exclusion
-         */
-
-        // Swiper
-        var swiper = new Swiper('.swiper-container', {
-            effect: "fade",
-            /*autoplay: {
-                delay: 10000,
-            },*/
-            fadeEffect: {
-                crossFade: true
-            }
-        });
-
-        // Slider
-        $('#map_slider').slider({
-            tooltip: "hide",
-            formatter: function(value) {
-                return 'Current value: ' + value;
-            }
-        });
-
-        // Slider change event
-        $("#map_slider").on("change", function(slideEvt) {
-            swiper.slideTo(slideEvt.value.newValue);   
-        });
-
 
     </script>
 
@@ -958,7 +854,7 @@
             // Add the marker to the map
             vsMarker = viewshedSVG.append("circle")
                 .attr("class", "user-circle")
-                .attr("r", 4)
+                .attr("r", 2.5)
 
             vsMarkerText = viewshedSVG.append("text")
                 .attr("class", "user-text")
@@ -980,6 +876,41 @@
                 .on("mouseover", function(d){ console.log(d) ;return viewshedSVG.selectAll(
                     ".viewshed-parc_label-id-" + d.properties.OBJECTID).style("visibility", "visible") })
                 .on("mouseout", function(){ return viewshedSVG.selectAll("text.viewshed-parc_label").style("visibility", "hidden") });
+
+
+                // Places name and coordinates
+                var cities = [
+                    {name: 'Lausanne', cord: [6.62, 46.51]},
+                    {name: 'Yverdon', cord: [6.632, 46.775]},
+                    {name: 'Montreux', cord: [6.914, 46.432]},
+                    {name: 'Nyon', cord: [6.230, 46.383]},
+                    {name: 'Orbe', cord: [6.540, 46.727]}
+                ]
+
+                // Draw places circles
+                viewshedSVG.selectAll("circles")
+                    .data(cities)
+                    .enter()
+                    .append('circle')
+                    .attr("cx", 0)
+                    .attr("cy", 0)
+                    .attr('r', 4)
+                    .attr("class", "windatlas-circle")
+                    .attr("transform", function(d, i) {return "translate(" + vsProjection(d.cord)[0] + "," + vsProjection(d.cord)[1] + ")";});
+
+                // Draw places text
+                viewshedSVG.selectAll("text")
+                    .data(cities)
+                    .enter()
+                    .append("text")
+                    .attr("class", "windatlas-label")
+                    .attr("x", 0)
+                    .attr("y", 0)
+                    .attr("transform", function(d, i) {return "translate(" + vsProjection(d.cord)[0] + "," + vsProjection(d.cord)[1] + ")";})
+                    .attr('text-anchor', 'middle')
+                    .attr('dy', -8)
+                    .text( function (d) { return d.name; });
+
         });        
 
         // Load the points
@@ -1010,10 +941,10 @@
                 .data(vd.features)
                 .enter()
                 .append("text")
-                .attr("class", function(d){ return "viewshed-parc_label-id-" + d.properties.OBJECTID + " viewshed-parc_label"})
+                .attr("class", function(d){ return "viewshed-parc_label-id-" + d.properties.id + " viewshed-parc_label"})
                 .attr("text-anchor", "middle")
                 .text(function(d) {
-                    return d.properties.SITE;
+                    return d.properties.name;
                 })
                 .attr("x", function(d) {
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0];
@@ -1027,10 +958,10 @@
                 .data(vd.features)
                 .enter()
                 .append("text")
-                .attr("class", function(d){ return "viewshed-parc_label-id-" + d.properties.OBJECTID + " viewshed-parc_label small"})
+                .attr("class", function(d){ return "viewshed-parc_label-id-" + d.properties.id + " viewshed-parc_label small"})
                 .attr("text-anchor", "middle")
                 .text(function(d) {
-                    return "7 éoliennes";
+                    return d.properties.count + " éoliennes";
                 })
                 .attr("x", function(d) {
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0];
@@ -1047,7 +978,7 @@
                 .attr("class", function(d){ return "parc_label-id-" + d.properties.OBJECTID + " parc_label"})
                 .attr("text-anchor", "start")
                 .text(function(d) {
-                    return d.properties.SITE;
+                    return d.properties.name;
                 })
                 .attr("x", function(d) {
                     return vsProjection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0];
@@ -1106,34 +1037,37 @@
          */
 
         // Add a test map SVG container
-        var svg = d3.select("body").append("svg")
-            .attr("id", "map")
+        var svgDebug = d3.select("#debug-map").append("svg")
+            .attr("id", "map_debug")
             .attr("width", width)
             .attr("height", height);
-
 
         // Load the map geometry
         d3.json("vd_communes-quantized_topo.json", function(error, vd) {
             if (error) throw error;
 
-            // add the geometries to the map
-            svg.append("path")
+            // add the geometries to the DEBUG map
+            svgDebug.append("path")
                 .datum(topojson.feature(vd, vd.objects.communes, function(a, b) { return a !== b; }))
                 .attr("class", "canton-boundary")
                 .attr("d", path);
 
-            // Add the boundary box to the map
-            bounds = svg.append("rect")
+            // Add the boundary box to the DEBUG map
+            bounds = svgDebug.append("rect")
                 .attr("fill", "rgba(0,0,0,0.2)")
+                .attr( "stroke", "#ffff00" )
+                .attr( "stroke-width", "1" )
                 .attr("x", projection(vdBounds[0])[0])
                 .attr("y", projection(vdBounds[1])[1])
                 .attr("width", projection(vdBounds[1])[0] - projection(vdBounds[0])[0])
                 .attr("height", projection(vdBounds[0])[1] - projection(vdBounds[1])[1]);
 
             // Add the marker to the map
-            marker = svg.append("circle")
-                .attr("fill", "#ff00ff")
-                .attr("r", 2)
+            debugMarker = svgDebug.append("circle")
+                .attr("fill", "transparent")
+                .attr( "stroke-width", 1 )
+                .attr( "stroke", " #ff00ff" )
+                .attr("r", 5)
 
         });
 
@@ -1150,7 +1084,7 @@
             ctx = canvas.getContext('2d')
             ctx.fillStyle = "#ff00ff";
             ctx.drawImage(img, 0, 0, img.width, img.height);
-            $("body").append($(canvas));
+            $("#debug-map").append($(canvas));
         });
 
     </script>
@@ -1162,7 +1096,18 @@
          */
 
         // Create the map
-        $("#mapbox").css({ height: $(window).height() })
+        $("#mapbox").css({ height: $(window).height() -51 })
+
+        // Layers
+        mapboxLayer = [
+            "Marais",
+            "IFP",
+            "ISOS",
+            "Parcs",
+            "Pro natura",
+            "Radars",
+            "Districts francs"
+        ];
 
         mapboxgl.accessToken = 'pk.eyJ1IjoibWF0aGlldXJ1ZGF6IiwiYSI6ImNpcW05cHNiMzAwMWloeG5rcHRlNHB5ZmUifQ.MElOP7joerjfI1OidI1G8g';
         var map = new mapboxgl.Map({
@@ -1177,61 +1122,155 @@
             // disable map zoom when using scroll
             map.scrollZoom.disable();
             // Add zoom and rotation controls to the map.
-            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.NavigationControl(), 'top-left');
             // Fit the map to the bounding box
             map.fitBounds([[5.93719220465601, 46.1162024335589],
-                        [7.34809579436735, 47.0150236028029]]);
+                        [7.34809579436735, 47.0150236028029]], {linear:true});
+
+            console.log( map.getZoom() )
+
+            for (var i = 0; i < mapboxLayer.length; i++) {
+                map.setLayoutProperty(mapboxLayer[i], 'visibility', 'none');
+            }
 
             // When a click event occurs on a feature in the states layer, open a popup at the
             // location of the click, with description HTML from its properties.
-            map.on('click', 'parcs-dge-088czy', function (e) {
+            for (var i = 0; i < mapboxLayer.length; i++) {
+                map.on('click', mapboxLayer[i], function (e) {
+                    new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(e.features[0].properties.Name)
+                        .addTo(map);
+                });
+            }
+
+            map.on('click', "eoliennes_parcs", function (e) {
                 new mapboxgl.Popup()
                     .setLngLat(e.lngLat)
-                    .setHTML(e.features[0].properties.name)
+                    .setHTML(e.features[0].properties.Name)
                     .addTo(map);
             });
 
             // Change the cursor to a pointer when the mouse is over the states layer.
-            map.on('mouseenter', 'parcs-dge-088czy', function () {
+            map.on('mouseenter', 'eoliennes_parcs', function () {
                 map.getCanvas().style.cursor = 'pointer';
             });
 
             // Change it back to a pointer when it leaves.
-            map.on('mouseleave', 'parcs-dge-088czy', function () {
+            map.on('mouseleave', 'eoliennes_parcs', function () {
                 map.getCanvas().style.cursor = '';
             });
 
-            /*map.addLayer({
-                'id': 'room-extrusion',
-                'type': 'fill-extrusion',
-                'source': {
-                    // Geojson Data source used in vector tiles, documented at
-                    // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
-                    'type': 'geojson',
-                    'data': 'mats.geojson'
-                },
-                'paint': {
-                    // See the Mapbox Style Spec for details on property functions
-                    // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
-                    'fill-extrusion-color': {
-                        // Get the fill-extrusion-color from the source 'color' property.
-                        'property': 'color',
-                        'type': 'identity'
-                    },
-                    'fill-extrusion-height': {
-                        // Get fill-extrusion-height from the source 'height' property.
-                        'property': 'height',
-                        'type': 'identity'
-                    },
-                    'fill-extrusion-base': {
-                        // Get fill-extrusion-base from the source 'base_height' property.
-                        'property': 'base_height',
-                        'type': 'identity'
-                    },
-                    // Make extrusions slightly opaque for see through indoor walls.
-                    'fill-extrusion-opacity': 0.5
-                }
-            });*/
+            
+            /**
+             * Layers manager
+             */
+
+            $('.mapbox-layers-panel input').on('ifChecked', function(event){
+                map.setLayoutProperty(this.dataset.layerid, 'visibility', 'visible');
+            })
+
+            $('.mapbox-layers-panel input').on('ifUnchecked', function(event){
+                map.setLayoutProperty(this.dataset.layerid, 'visibility', 'none');
+            })
+
+        });
+
+    </script>
+    <script type="text/javascript">
+        
+        /**
+         * ScrollMagic
+         */
+
+        // Set new ScrollMagic controller
+        var controller = new ScrollMagic.Controller();
+
+        $(".mapbox_section-content").css({ "min-height": $(window).height() - 51 })
+
+        // Viewpoints to be reached on the map
+        viewpoints = [
+            [46.560949, 6.656657, 9, 0],
+            [46.560949, 6.656657, 9, 0],
+            [46.774402, 6.948789, 10, 30],
+            [46.560949, 6.656657, 9, 0],
+            [46.560949, 6.656657, 9, 0],
+        ];
+
+        layerGroups = [
+            [0,1,3,4],
+            [6],
+            [5],
+            [2]
+        ]
+
+        // create the scene
+        new ScrollMagic.Scene({
+                duration: $(".mapbox-infobox").height() - $("#mapbox").height(),
+                offset: $("#mapbox").height() / 2 -25,
+                triggerElement: $("#mapbox").get(0),
+                triggerHook: "onCenter"
+            })
+            .setPin("#mapbox")
+            //.addIndicators({ name: "Map container" })
+            .addTo(controller);
+
+        // Filters
+        /*new ScrollMagic.Scene({
+                duration: $(".mapbox-infobox").height() - $("#mapbox").height(),
+                offset: $("#mapbox").height() / 2 -25,
+                triggerElement: $("#mapbox").get(0),
+                triggerHook: "onCenter"
+            })
+            .setPin(".mapbox-infobox-header", {pushFollower: false})
+            .addTo(controller);*/
+
+
+        $('.mapbox-section').each(function(index) {
+
+            new ScrollMagic.Scene({ triggerElement: this, offset: $(this).height() / 3 })
+                .on('start', function(e) {
+                    map.flyTo({
+                        center: [
+                            viewpoints[index][1],
+                            viewpoints[index][0]
+                        ],
+                        zoom: viewpoints[index][2],
+                        pitch: viewpoints[index][3]
+                    });
+
+                    for (var i = 0; i < mapboxLayer.length; i++) {
+                        map.setLayoutProperty(mapboxLayer[i], 'visibility', 'none');
+                    }
+
+                    for (var i = 0; i < layerGroups[index].length; i++) {
+                        map.setLayoutProperty(mapboxLayer[layerGroups[index][i]], 'visibility', 'visible');
+                    }
+
+                    //map.setPaintProperty('protected-areas-topo-quantize-cmo4qm', 'fill-opacity', Math.random());
+                })
+                .on('leave', function(e) {
+                    if( index < 1 ){
+                        console.log( "First one" )
+                    }else{
+                        map.flyTo({
+                            center: [
+                                viewpoints[index-1][1],
+                                viewpoints[index-1][0]
+                            ],
+                            zoom: viewpoints[index-1][2],
+                            pitch: viewpoints[index-1][3]
+                        });
+
+                        for (var i = 0; i < mapboxLayer.length; i++) {
+                            map.setLayoutProperty(mapboxLayer[i], 'visibility', 'none');
+                        }
+
+                        //map.setPaintProperty('protected-areas-topo-quantize-cmo4qm', 'fill-opacity', Math.random());
+                    }
+                })
+                //.addIndicators({ name: "Section" })
+                .addTo(controller);
 
         });
 

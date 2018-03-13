@@ -86,8 +86,8 @@ a{
             font-family: "Montserrat", sans-serif;
             font-size: 13px;
             font-weight: 400;
-            line-height: 1.6;
-            color: #808184;
+            line-height: 1.5;
+            color: #7a7b7b;
         }
         .message{
             font-family: "Montserrat", sans-serif;
@@ -150,7 +150,7 @@ html.loading .loader { opacity: 1; }
 }
 .publication_date{
     font-family: "Montserrat", sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     text-transform: uppercase;
     color: #c1c2c3;
 }
@@ -159,7 +159,7 @@ a{
 }
 p{
     font-family: Georgia, serif;
-    font-size: 24px;
+    font-size: 19px;
     line-height: 1.8em;
     font-weight: 400;
     text-shadow: 0 1px 0 #FFF;
@@ -260,6 +260,8 @@ p b{
 
 .container.parcs .parc-bloc h3{
     font-size: 14px;
+    padding-left: 6px;
+    border-left: 3px solid #f02ba7;
 }
 
 .container.parcs .parc-bloc p{
@@ -371,6 +373,24 @@ p.small{
  * END Message
  */
 
+
+/**
+ * DEBUG MAP
+ */
+
+ #map_debug{
+    position: absolute;
+ }
+
+#map_debug path{
+    fill:transparent;
+    stroke: #ffff00;
+    stroke-width: 1;
+}
+
+ /**
+ * END DEBUG MAP
+ */
 
  /**
   * #1 MAP (parks map)
@@ -497,8 +517,8 @@ p.small{
 }
 
 .user-circle{
-    fill: #ffffff;
-    stroke: rgba(0,0,0,0.5);
+    fill: #333333;
+    stroke: rgba(255,255,255,0.5);
     opacity: 0.95;
     stroke-width:1px;
     visibility: hidden;
@@ -553,7 +573,7 @@ p.small{
  */
 
 .legend-bloc{
-    width: 120px;
+    width: 160px;
     display: inline-block;
 }
 
@@ -616,7 +636,7 @@ p.small{
 .windatlas-legend .legend-color{ width: 180px; }
 .windatlas-legend .legend-bloc .legend-sub-color,
 .windatlas-legend .legend-bloc .legend-sub-text{ width: 90px; }
-.windatlas-legend .legend-bloc .legend-sub-color:nth-child(1){ background-color: #f5f6f7; }
+.windatlas-legend .legend-bloc .legend-sub-color:nth-child(1){ background-color: #fd6fab; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(2){ background-color: #fd6fab; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(3){ background-color: #79b4a7; }
 .windatlas-legend .legend-bloc .legend-sub-color:nth-child(4){ background-color: #d1e7e4; }
@@ -664,13 +684,6 @@ p.small{
     cursor: pointer;
 }
 
-.windatlas-label{
-    fill: #404244;
-    font-size: 12px;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    text-shadow: -1px -1px 0 rgba(255,255,255,1), 1px -1px 0 rgba(255,255,255,1), -1px 1px 0 rgba(255,255,255,1), 1px 1px 0 rgba(255,255,255,1);
-}
 
  /**
   * END #3 MAP
@@ -707,6 +720,122 @@ p.small{
  * END Zones d'exclusion
  */
 
+
+/**
+ * #4 MAP (Mapbox)
+ */
+
+ #mapbox{
+    overflow:hidden;
+ }
+
+ .mapbox-layers-panel{
+
+ }
+
+.mapbox-infobox-header{
+    background-color:#f5f6f7;
+    border-bottom: 1px solid #f1f2f3;
+    padding: 20px 0px 20px 0px;
+    margin-bottom: 20px;
+}
+
+.mapbox-infobox-header h2{
+    color: #ee45ac;
+}
+
+.mapbox-infobox p{
+    color: #666;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+ .mapbox-infobox{
+    background-color: white;
+    box-shadow: -4px 0px 16px rgba(0,0,0,0.15);
+ }
+
+ .mapbox_section-content{ 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+ }
+
+ /* infobox */
+
+ .mapbox-section {
+    min-height: 600px;
+    border-bottom: 1px solid rgba(0,0,0,0.085);
+    border-left: 1px solid rgba(0,0,0,0.085);
+}
+
+/* Custom radio button */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #333;
+    font-weight: 500;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #ee45ac;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* END custom radio button*/
+
+ /**
+  *  End #4 MAP
+  */
 
     /**
      * Pondération

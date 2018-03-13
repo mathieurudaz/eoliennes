@@ -37,21 +37,50 @@ var geocoding = (function(){
                 var projectedPosition = projection([position.lng, position.lat])
                 var vsProjectedPosition = vsProjection([position.lng, position.lat])
 
-                // Place the marker on the map
-                marker
+                // If the address is an area and not a point (approximate)
+                if(response.results[0].geometry.bounds){
+
+                    console.log( "This is a large area (polygon)" )
+
+                    var locationBounds = response.results[0].geometry.bounds
+                    var locationNortheastBounds = projection([
+                        locationBounds["northeast"].lng,
+                        locationBounds["northeast"].lat])
+                    var locationSouthwestBounds = projection([
+                        locationBounds["southwest"].lng,
+                        locationBounds["southwest"].lat])
+
+                    bounds = svgDebug.append( "rect" )
+                        .attr( "fill", "rgba(255,255,0,0.2)" )
+                        .attr( "x", locationSouthwestBounds[0] )
+                        .attr( "y", locationNortheastBounds[1] )
+                        .attr( "width", locationNortheastBounds[0] - locationSouthwestBounds[0] )
+                        .attr( "height", locationSouthwestBounds[1] - locationNortheastBounds[1] )
+                // If the address is a precise point
+                }else{
+
+                    console.log( "This is a precise addresse (point)" )
+
+                }
+
+                // Place the marker on the Debug map
+                debugMarker
                     .attr("cx", projectedPosition[0])
                     .attr("cy", projectedPosition[1])
 
+                // Place the "Your position" marker
                 vsMarker
                     .attr("style", "visibility: visible")
                     .attr("cx", vsProjectedPosition[0])
                     .attr("cy", vsProjectedPosition[1])
 
+                // Place the "Your position" text
                 vsMarkerText
                     .attr("style", "visibility: visible")
                     .attr("x", vsProjectedPosition[0] + 60)
                     .attr("y", vsProjectedPosition[1] - 22)
 
+                // Place the arrow
                 d3.select("#user-arrow")
                     .attr("style", "visibility: visible")
                     .attr("style", "left:" + (vsProjectedPosition[0] + 0 ) + "px; top:" + (vsProjectedPosition[1]-33) + "px;visibility:visible;");

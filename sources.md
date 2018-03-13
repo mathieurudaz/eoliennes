@@ -7,6 +7,13 @@ https://data.geo.admin.ch/ch.bfe.windenergie-geschwindigkeit_h150/
 
 http://www.opendem.info/opendemeu_background.html
 
+Puis forêts sur OSM
+Rasterisé les forêt avec des valeurs de 0 et 1
+Créé une nouvelle carte d'élévation qui tient compte des forêts en ajoutant 20m là où elles se trouvent
+viewshed QGIS
+- Observer ( éolienne, 170m ou hauteur définie )
+- Target ( 1,5m )
+
 - Filtre blanc opacite sur carte des vents a part. garder parcs sur carte solide (IMG)
  - Zones d'exclusion en rose/orange, parcs en vert (ou inverse)
  - Parcs avec villes, pas de label sur les parcs
