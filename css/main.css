@@ -382,12 +382,6 @@ p.small{
     position: absolute;
  }
 
-#map_debug path{
-    fill:transparent;
-    stroke: #ffff00;
-    stroke-width: 1;
-}
-
  /**
  * END DEBUG MAP
  */
@@ -532,7 +526,7 @@ p.small{
     stroke-width: 2px;
     stroke-linecap: butt;
     stroke-linejoin: miter;
-    font-weight: 700;
+    font-weight: 400;
     visibility: hidden;
 }
 

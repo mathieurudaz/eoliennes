@@ -98,3 +98,23 @@ EPSG:3857
 6a. Geometrie Limites D3
 
 
+**Annalyse des zones approximatives**
+correspondace surface avec Geotiff
+Sur le Geotiff:
+    Zones à 0
+    Zones à plus de 0
+    Zones à Null ou -1 ou 255 si image
+
+- prendre la surface retournée par Google Geocoding
+- compter les cellules a 0 et a plus de 0
+    - Donne le pourcent de chance de voir une eolienne ou plus
+    - Faire la moyenne des valeurs supérieures à 0
+        + Donne le nombre d'éoliennes potentiellement visibles
+        + Au final, "Vous avez 32% de voir 5 à 10 éoliennes"
+
+Eoliennes *vérifier*
+- Plus que 5
+- Plus que 10
+- Plus que 15
+- Plus que 25
+

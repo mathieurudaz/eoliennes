@@ -51,7 +51,7 @@ var geocoding = (function(){
                         locationBounds["southwest"].lat])
 
                     bounds = svgDebug.append( "rect" )
-                        .attr( "fill", "rgba(255,255,0,0.2)" )
+                        .attr( "fill", "rgba(255,0,255,0.2)" )
                         .attr( "x", locationSouthwestBounds[0] )
                         .attr( "y", locationNortheastBounds[1] )
                         .attr( "width", locationNortheastBounds[0] - locationSouthwestBounds[0] )
