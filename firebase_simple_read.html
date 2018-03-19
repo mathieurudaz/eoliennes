@@ -33,7 +33,7 @@
     }
   });
 
-  firebase.database().ref('/data').startAt(3).once('value').then(function(snapshot) {
+  firebase.database().ref('/data').startAt(null, 10).limit(10).once('value', function(){ console.log("SUCCESS")}).then(function(snapshot) {
     console.log( "OK" )
     console.log( snapshot.val() )
   });

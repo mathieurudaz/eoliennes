@@ -113,9 +113,9 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Toutes les sections <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#chapitre-1">Section 1</a></li>
-                            <li><a href="#chapitre-2">Section 2</a></li>
-                            <li><a href="#chapitre-3">Section 3</a></li>
+                            <li><a href="#chapitre-1">La visibilité</a></li>
+                            <li><a href="#chapitre-2">Le choix des emplacement</a></li>
+                            <li><a href="#chapitre-3">La carte des parcs</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -132,7 +132,7 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <img src="subhead.gif" style="width: 100px; height: auto;">
-                <h2 class="colorized">Vaud et Régions - éoliennes</h2>
+                <h2 class="colorized">Vaud et Régions - Eoliennes</h2>
                 <h1>Nous avons cartographié tous les projets éoliens du canton.<br/>Voici ce que vous pourriez voir.</h1>
                 <div class="author">Egestas Condimentum, Aliquet Ullamcorper</div>
                 <div class="publication_date">mars 2018</div>
@@ -155,15 +155,15 @@
         <div class="row" style="margin-top: 20px;">
             <div class="col-md-offset-1 col-md-10">
                 <input id="pac-input" class="controls" type="text" placeholder="Votre adresse">
-                <div class="special xs">Essayez par exemple <a href="#">Lausanne</a>, <a href="#">Parc de Sauvabelin</a>, <a href="#">Col des Mosses</a> ou <a href="#">Lac de Joux</a>.</div>
-                <div class="special xs">Seules les adresses situées dans le canton de Vaud sont prises en compte.</div>
+                <div class="special xs">Essayez par exemple <a href="#">Avenue de la gare 10, Lausanne</a>, <a href="#">Parc de Sauvabelin</a>, <a href="#">Col des Mosses</a> ou <a href="#">Lac de Joux</a>.</div>
+                <div class="special xs">Seules les adresses situées dans le canton de Vaud sont prises en compte. Si l'adresse n'est pas suffisamment précise, c'est la région ou la commune qui est utilisée.</div>
             </div>
         </div>
         <div class="row message_container text-center" style="margin-top: 40px; margin-bottom: 40px;">
             <div class="col-md-offset-3 col-md-6">
                 <div><div class="spinner lds-ring"><div></div><div></div><div></div><div></div></div></div>
-                <div class="message">Il y a de fortes chances pour que vous puissiez voir
-                <br/><b class="special">6 éoliennes</b></div>
+                <div class="message">Dans cette région, vous aurez probablement <b class="special special-1">0%</b> de chances de voir <span class="special-2">6 éoliennes</span>
+            <div class="special md light" style="margin-top: 20px;">Cette estimation est obtenue à partir du relief, de la distance entre votre position et les parcs éoliens et de la couverture des forêts. <b>Nous ne tenons pas compte des bâtiments</b>. Si vous vous trouvez dans une ville ou une zone densément bâtie, votre champ de vision est limité.</div></div>
             </div>
         </div>
     </div>
@@ -286,7 +286,7 @@
                 <h2>Le choix des emplacements</h2>
                 <div class="windatlas-legend">
                     <div class="legend-bloc">
-                        <div class="legend-text">vitesse moyenne des vents à 150m</div>
+                        <div class="legend-text">vitesse moyenne des vents à 150m au dessus du sol</div>
                         <div class="legend-color">
                             <div class="legend-sub-color"></div>
                         </div>
@@ -686,7 +686,7 @@
             <div class="col-md-offset-3 col-md-6">
                 <h2>Méthodologie</h2>
                 <p>Les zones de visiblité des éoliennes ont été calculées à partir d'une carte d'élévation du territoire <a href="#">Lien vers source 1</a>, des forêts issues d'Open Street Map. etc. Hauteur base-rotor, visibilité 10km</p>
-                <p>Les promoteurs des parcs A, B, C, D, ayant refusé de nous donner l'emplacement de leurs futures éoliennes, nous avons placé aléatoirement un nombre de mâts équivalent aux données techniques de chaque parc dans leur périmètre, etc.</p>
+                <p>Les promoteurs des parcs A, B, C, D, ayant refusé de nous donner l'emplacement de leurs futures éoliennes, nous avons placé aléatoirement un nombre de mâts équivalent à celui donné dans les informations de chaque parc dans leur périmètre, etc.</p>
                 <p><a href="#">Lien vers source 1</a></p>
             </div>
         </div>
@@ -696,7 +696,7 @@
             </div>
         </div>
     </div>
-    <div id="debug-map" style="display: block;"></div>
+    <div id="debug-map" style="display: block; position: relative;"></div>
     <footer>
         <div class="container">
             <div class="row">
@@ -808,13 +808,13 @@
             .scale(vss)
             .translate(vst);
 
-        // Add a test map SVG container
+        // Add viewshed map SVG container
         var viewshedSVG = d3.select("#viewshed-container").append("svg")
             .attr("id", "viewshed-map")
             .attr("width", vdWidth)
             .attr("height", vdHeight);
 
-        // Add a test map SVG container
+        // Add parks SVG container
         var parksSVG = d3.select("#parks-container").append("svg")
             .attr("id", "parks-map")
             .attr("width", vdWidth)
@@ -1047,7 +1047,7 @@
             debugMarker = svgDebug.append("circle")
                 .attr("fill", "transparent")
                 .attr( "stroke-width", 1 )
-                .attr( "stroke", " #ff00ff" )
+                .attr( "stroke", " #00ffff" )
                 .attr("r", 5)
 
         });
@@ -1058,7 +1058,7 @@
          */
         var canvas = document.createElement('canvas');
         var img = new Image()
-        img.src = "viewshed.png"
+        img.src = "viewshed_alpha.png"
         img.addEventListener('load', function(){
             canvas.width = img.width;
             canvas.height = img.height;
@@ -1067,6 +1067,15 @@
             ctx.drawImage(img, 0, 0, img.width, img.height);
             $("#debug-map").append($(canvas));
         });
+
+        /*$("#debug-map").on("mousemove", function(e){
+            var parentOffset = $(this).parent().offset(); 
+            var relX = Math.floor(e.pageX - $(this).position().left);
+            var relY = Math.floor(e.pageY - $(this).position().top);
+
+            console.log(relX + ", " + relY)
+            console.log(canvas.getContext('2d').getImageData(relX, relY, 1, 1).data)
+        })*/
 
     </script>
 
@@ -1108,7 +1117,7 @@
             map.fitBounds([[5.93719220465601, 46.1162024335589],
                         [7.34809579436735, 47.0150236028029]], {linear:true});
 
-            console.log( map.getZoom() )
+            //console.log( map.getZoom() )
 
             for (var i = 0; i < mapboxLayer.length; i++) {
                 map.setLayoutProperty(mapboxLayer[i], 'visibility', 'none');
